@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@persian-tools/vue-persian-tools": "^0.14.0",
+    "@unpic/vue": "^0.0.41",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
