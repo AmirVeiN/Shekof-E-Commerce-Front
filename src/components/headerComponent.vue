@@ -25,7 +25,7 @@
                 <div class=" w-52 h-full flex justify-center items-center">
                     <button class="text-sm flex flex-row space-x-1 text-blue">
                         <p class="font-extrabold">۰۲۱-۶۶۶-۸۸-۷۴۰</p>
-                        <p>خط ویژه پشتیبانی</p>
+                        <p class="font-extrabold">خط ویژه پشتیبانی</p>
                     </button>
                 </div>
             </div>
@@ -196,19 +196,19 @@
                 <div class="w-48 flex flex-row justify-evenly items-center">
                     <button class="flex flex-row relative">
                         <div
-                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs">
+                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02">
                             0</div>
                         <font-awesome-icon icon="fa-solid  fa-shuffle" class="text-xl text-gray hover:text-black" />
                     </button>
                     <button class="flex flex-row relative">
                         <div
-                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs">
+                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02">
                             0</div>
                         <font-awesome-icon icon="fa-solid fa-heart" class="text-xl text-gray hover:text-black" />
                     </button>
                     <button class="flex flex-row relative">
                         <div
-                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs">
+                            class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02">
                             0</div>
                         <font-awesome-icon icon="fa-solid fa-cart-shopping" class="text-xl text-gray hover:text-black" />
                     </button>

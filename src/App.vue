@@ -2,6 +2,7 @@
 import headerComponent from './components/headerComponent.vue';
 import { RouterView } from 'vue-router'
 import MainImageComponent from './components/mainImageComponent.vue';
+import sliderComponentVue from './components/sliderComponent.vue';
 
 </script>
 
@@ -9,5 +10,6 @@ import MainImageComponent from './components/mainImageComponent.vue';
   <headerComponent />
   <MainImageComponent />
   <RouterView />
+  <sliderComponentVue />
 </template>
 
