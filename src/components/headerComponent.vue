@@ -15,17 +15,17 @@
             </div>
             <div class="flex flex-row-reverse h-full items-center">
                 <div class=" w-[450px] h-full flex flex-row-reverse justify-evenly items-center">
-                    <button class="text-gray text-sm hover:text-blue">فروشگاه</button>
-                    <button class="text-gray text-sm hover:text-blue">قوانین</button>
-                    <button class="text-gray text-sm hover:text-blue">مرجوعی</button>
-                    <button class="text-gray text-sm hover:text-blue">درباره ما</button>
-                    <button class="text-gray text-sm hover:text-blue">تماس باما</button>
-                    <button class="text-gray text-sm hover:text-blue">مجله</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">فروشگاه</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">قوانین</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">مرجوعی</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">درباره ما</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">تماس باما</button>
+                    <button class="text-gray font-semibold text-sm hover:text-blue">مجله</button>
                 </div>
                 <div class=" w-52 h-full flex justify-center items-center">
-                    <button class="text-sm flex flex-row space-x-1 text-blue">
-                        <p class="font-extrabold">۰۲۱-۶۶۶-۸۸-۷۴۰</p>
-                        <p class="font-extrabold">خط ویژه پشتیبانی</p>
+                    <button class="text-sm font-semibold flex flex-row  text-blue">
+                        <p class="">۰۲۱-۶۶۶-۸۸-۷۴۰</p>
+                        <p class="">خط ویژه پشتیبانی</p>
                     </button>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                     <button class="bg-blue p-3 px-4 rounded-l-full">
                         <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="text-white text-xl" />
                     </button>
-                    <input class="bg-transparent w-full h-full flex text-right p-2 pr-3 focus:outline-none" type="text"
+                    <input class="bg-transparent w-full h-full font-semibold flex text-right p-2 pr-3 focus:outline-none" type="text"
                         placeholder="جستجوی محصولات">
                 </div>
                 <button class="bg-blue rounded-full flex justify-center items-center p-3 px-4 text-white w-[18%]">لیست
@@ -204,7 +204,7 @@
                         <div
                             class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02">
                             0</div>
-                        <font-awesome-icon icon="fa-solid fa-heart" class="text-xl text-gray hover:text-black" />
+                        <font-awesome-icon icon="fa-regular fa-heart" class="text-xl text-gray hover:text-black" />
                     </button>
                     <button class="flex flex-row relative">
                         <div

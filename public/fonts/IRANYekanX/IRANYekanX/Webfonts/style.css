@@ -5,6 +5,11 @@ body {
 }
 h1, h2, h3, h4, h5, h6,input, textarea {
 	font-family: IRANYekanX !important;
+	
+}
+::placeholder {
+	font-family: IRANYekanX !important;
+	font-weight: 300;
 }
 h1 {
 	font-weight: bold;

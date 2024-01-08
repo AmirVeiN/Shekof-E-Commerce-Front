@@ -1,5 +1,17 @@
 @import url('../../public/fonts/IRANYekanX/IRANYekanX/Webfonts/style.css');
-
+.carousel__icon{
+    display: none;
+    transition: all 0.8s;
+    
+}
+.carousel:hover .carousel__icon{
+    display: flex;
+    transition: all 0.3s;
+    
+}
+.carousel{
+    transition: all 0.3s;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
