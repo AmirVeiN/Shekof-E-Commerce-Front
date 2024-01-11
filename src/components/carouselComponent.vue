@@ -38,7 +38,7 @@ export default defineComponent({
 <template>
   <div class="flex justify-center items-center">
       <div class="w-[68%]">
-        <carousel dir="rtl" transition="500" v-bind="settings" :breakpoints="breakpoints">
+        <carousel dir="rtl" transition="500" v-bind="settings" :wrap-around="true" :breakpoints="breakpoints">
           <slide v-for="slide in 7" :key="slide">
             <div class="carousel__item">{{ slide }}</div>
           </slide>
