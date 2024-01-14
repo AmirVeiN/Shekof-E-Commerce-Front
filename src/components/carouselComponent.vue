@@ -1,7 +1,6 @@
 <script>
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
-import sliderComponent from "./sliderComponent.vue";
 import "vue3-carousel/dist/carousel.css";
 import SliderComponent from "./sliderComponent.vue";
 
@@ -21,7 +20,7 @@ export default defineComponent({
         id: 1,
         likes: 4,
         price: 1200000,
-        stock: "instock",
+        stock: "inStock",
         srcImg: "sadasd",
       },
       {

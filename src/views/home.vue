@@ -10,9 +10,7 @@ import carouselComponent from '../components/carouselComponent.vue';
 <template>
   <headerComponent />
   <MainImageComponent />
-  <Sliders />
-  <RouterView />
-  <carouselComponent/>
-  
+  <!-- <Sliders /> -->
+  <carouselComponent />
 </template>
 
