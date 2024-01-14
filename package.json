@@ -13,12 +13,19 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@heroicons/vue": "^2.1.1",
     "@persian-tools/vue-persian-tools": "^0.14.0",
     "@unpic/vue": "^0.0.41",
     "axios": "^1.6.5",
     "vue": "^3.3.11",
+<<<<<<< HEAD
     "vue-axios": "^3.5.2",
     "vue-router": "^4.2.5"
+=======
+    "vue-router": "^4.2.5",
+    "vue-star-rating": "^2.1.0",
+    "vue3-carousel": "^0.3.1"
+>>>>>>> fc9ea125afb5e0b2a3caed17d536b977c47a45d1
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

@@ -15,6 +15,7 @@ export default {
       "gray": "#808080",
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
+      'red':'rgb(185 28 28)'
     },
     extend: {},
   },

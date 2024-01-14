@@ -13,7 +13,7 @@ import { Image } from "@unpic/vue";
                         <img src="/Shekaf-Slider-3.png" alt="">
                     </button>
                     <button class="h-full w-full flex justify-center items-center">
-                        <img src="/Shekaf-Slider-2.png" alt="">
+                        <img src="/Shekaf-Slider-2.png" alt="" >
                     </button>
                 </div>
                 <div class="h-1/2 w-full flex min-w-[450px] justify-center items-center">
