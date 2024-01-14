@@ -1,8 +1,9 @@
 <script>
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
-
+import sliderComponent from "./sliderComponent.vue";
 import "vue3-carousel/dist/carousel.css";
+import SliderComponent from "./sliderComponent.vue";
 
 export default defineComponent({
   name: "Breakpoints",
@@ -11,8 +12,43 @@ export default defineComponent({
     Slide,
     Navigation,
     Pagination,
+    SliderComponent,
   },
   data: () => ({
+    sliderData: [
+      {
+        title: "lorem2",
+        id: 1,
+        likes: 4,
+        price: 1200000,
+        stock: "instock",
+        srcImg: "sadasd",
+      },
+      {
+        title: "lorem2",
+        likes: 4,
+        id: 2,
+        price: 1200000,
+        stock: "instock",
+        srcImg: "sadasd",
+      },
+      {
+        title: "lorem2",
+        likes: 4,
+        id: 3,
+        price: 1200000,
+        stock: "instock",
+        srcImg: "sadasd",
+      },
+      {
+        title: "lorem2",
+        likes: 4,
+        id: 4,
+        price: 1200000,
+        stock: "instock",
+        srcImg: "sadasd",
+      },
+    ],
     // carousel settings
     settings: {
       itemsToShow: 1,
@@ -37,16 +73,28 @@ export default defineComponent({
 </script>
 <template>
   <div class="flex justify-center items-center">
-      <div class="w-[68%]">
-        <carousel dir="rtl" transition="500" v-bind="settings" :wrap-around="true" :breakpoints="breakpoints">
-          <slide v-for="slide in 7" :key="slide">
-            <div class="carousel__item">{{ slide }}</div>
-          </slide>
-          <template #addons>
-            <navigation />
-          </template>
-        </carousel>
-      </div>
+    <div class="w-[68%]">
+      <carousel
+        dir="rtl"
+        transition="500"
+        v-bind="settings"
+        :wrap-around="true"
+        :breakpoints="breakpoints"
+      >
+        <slide  v-for="slide in sliderData" :key="slide.id">
+          <SliderComponent
+            :title="slide.title"
+            :likes="slide.likes"
+            :price="slide.price"
+            :stock="slide.stock"
+            :srcImg="slide.srcImg"
+            />
+        </slide>
+        <template #addons>
+          <navigation />
+        </template>
+      </carousel>
+    </div>
   </div>
   <div class="h-96"></div>
 </template>
