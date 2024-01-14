@@ -1,13 +1,10 @@
 <script setup>
-import headerComponent from './components/headerComponent.vue';
+import Home from './views/home.vue';
 import { RouterView } from 'vue-router'
-import MainImageComponent from './components/mainImageComponent.vue';
-
 </script>
 
 <template>
-  <headerComponent />
-  <MainImageComponent />
+  <Home />
   <RouterView />
 </template>
 
