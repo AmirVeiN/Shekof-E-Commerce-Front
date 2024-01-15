@@ -1,7 +1,6 @@
 <script >
+
 import axios from 'axios'
-
-
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
@@ -14,15 +13,11 @@ export default defineComponent({
         itemsToShow: 1,
         snapAlign: "center",
       },
-      // breakpoints are mobile first
-      // any settings not specified will fallback to the carousel settings
       breakpoints: {
-        // 700px and up
         700: {
           itemsToShow: 3.5,
           snapAlign: "center",
         },
-        // 1024 and up
         1024: {
           itemsToShow: 5,
           snapAlign: "start",
@@ -56,15 +51,13 @@ export default defineComponent({
     }
   },
 
-  // carousel settings
-
 })
 </script>
 
 <script setup>
 import SliderComponent from "./sliderComponent.vue";
-
 </script>
+
 <template>
   <div class="flex justify-center items-center">
     <div class="w-[68%] min-w-[1000px]">

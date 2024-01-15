@@ -22,7 +22,6 @@ export default {
   }
 };
 
-
 </script>
 <template>
   <div class="w-full h-full flex justify-center items-center bg-bubble-gum">
