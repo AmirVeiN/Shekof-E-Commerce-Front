@@ -11,7 +11,7 @@ import axios from "axios"
 
 axios.defaults.baseURL= 'http://127.0.0.1:8000'
 
-library.add(faCartShopping, faHeart, faShuffle, faChevronLeft, faMagnifyingGlass, faAngleDown, faBars)
+library.add(faCartShopping, faHeart, faShuffle, faChevronLeft, faMagnifyingGlass, faAngleDown, faBars , faCheck)
 const app = createApp(App)
 
 app.use(router, axios)

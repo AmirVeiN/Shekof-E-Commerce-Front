@@ -7,17 +7,15 @@ export default {
   props: {
     title: String,
     likes: Number,
-    price: Number,
-    stock: String,
+    price: String,
+    stock: Number,
     srcImg: String,
   },
   methods:{
       stockCheck(){
-        if ('inStock'===this.stock) {
-          console.log('its true');
+        if (this.stock === 1) {
           return true
         }else{
-          console.log('its False');
           return false
         }
       }
@@ -26,17 +24,12 @@ export default {
 
 
 </script>
-
-<!-- FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 -->
 <template>
   <div class="w-full h-full flex justify-center items-center bg-bubble-gum">
     <div class="w-[264px] relative bg-tahiti">
       <div class="flex peer flex-col w-[264px] m-auto shadow-md rounded-md">
         <div class="productImg">
-          <img :src="srcImg" alt="" class="" />
+          <img src="/images/1.png" alt="" class="" />
         </div>
         <div class="flex flex-col justify-center px-4 items-center gap-2">
           <div class="productName">
@@ -84,7 +77,7 @@ SPACING SYSTEM (px)
             class="productPrice text-sm font-bold text-[#435fcb] text-right ss02 flex flex-row"
           >
             <div class="">تومان</div>
-            <div class="">{{ price }}</div>
+            <div class="">{{ parseInt(price) }}</div>
           </div>
         </div>
       </div>
