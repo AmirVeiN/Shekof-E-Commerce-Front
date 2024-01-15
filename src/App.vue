@@ -1,4 +1,3 @@
-
 <script setup>
 // import Home from './views/home.vue';
 import { RouterView } from 'vue-router'
@@ -7,8 +6,6 @@ import carouselComponent from './components/carouselComponent.vue';
 </script>
 
 <template>
-  
-  <Home />
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
