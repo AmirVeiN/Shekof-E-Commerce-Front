@@ -10,10 +10,10 @@ import { Image } from "@unpic/vue";
             <div class="w-[40%] flex flex-col h-full space-y-6 justify-center items-center ">
                 <div class="h-1/2 w-full flex min-w-[450px] flex-row justify-evenly items-center">
                     <button class="h-full w-full flex justify-center items-center">
-                        <img src="/Shekaf-Slider-3.png" alt="">
+                        <img src="/Shekaf-Slider-2.png" alt="">
                     </button>
                     <button class="h-full w-full flex justify-center items-center">
-                        <img src="/Shekaf-Slider-2.png" alt="" >
+                        <img src="/Shekaf-Slider-3.png" alt="" >
                     </button>
                 </div>
                 <div class="h-1/2 w-full flex min-w-[450px] justify-center items-center">
