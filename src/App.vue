@@ -8,7 +8,7 @@ import carouselComponent from './components/carouselComponent.vue';
 
 <template>
   
-  <!-- <Home /> -->
+  <Home />
   <!-- <RouterView /> -->
 </template>
 
