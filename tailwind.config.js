@@ -15,7 +15,18 @@ export default {
       "gray": "#808080",
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
-      'red':'rgb(185 28 28)'
+      'purple': '#800080',
+      'olive': '#808000',
+      'cream': '#FFFDD0',
+      'brown': '#964B00',
+      'lime': '#32CD32',
+      'silver': '#C0C0C0',
+      'Sierrablue': '#BFDAF7',
+      'Burgundy': '#800020',
+      'Beige': '#F5F5DC',
+      'Green': '#008000',
+      'red':'#FF0000'
+
     },
     extend: {},
   },

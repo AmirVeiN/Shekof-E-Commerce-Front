@@ -3,7 +3,7 @@
 
 
 <template>
-    <div class="w-full h-96 static flex justify-center items-center">
+    <div class="w-full h-96 static flex justify-center items-center mt-52">
         <div class="w-[68%] min-w-[1000px] justify-center items-center  flex flex-col space-y-5">
             <div class="flex flex-row-reverse justify-between items-center">
                 <div class="flex flex-row space-x-4 justify-center items-center">

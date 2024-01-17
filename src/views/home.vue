@@ -2,7 +2,6 @@
 import headerComponent from '../components/headerComponent.vue';
 import MainImageComponent from '../components/mainImageComponent.vue';
 import carouselComponent from '../components/carouselComponent.vue';
-import slider from '../components/sliders.vue';
 import FooterCmponent from '@/components/footerCmponent.vue';
 
 </script>
@@ -10,7 +9,6 @@ import FooterCmponent from '@/components/footerCmponent.vue';
 <template>
   <headerComponent />
   <MainImageComponent />
-  <!-- <slider /> -->
   <carouselComponent />
   <FooterCmponent />
 </template>

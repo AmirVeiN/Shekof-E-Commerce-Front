@@ -7,8 +7,9 @@ export default {
   props: {
     title: String,
     likes: Number,
-    price: String,
+    price: Number,
     stock: Number,
+    color : String,
     srcImg: String,
   },
   methods:{
@@ -18,26 +19,48 @@ export default {
         }else{
           return false
         }
-      }
+      },
+      imageUrl(){
+        const img = this.srcImg
+        const list = img.split(",")
+        return list[0]
+      },
+      colorList(){
+        const colors = this.color.split(",")
+        return colors
+      },
   }
 };
 
 </script>
 <template>
-  <div class="w-full h-full flex justify-center items-center bg-bubble-gum">
-    <div class="w-[264px] relative bg-tahiti">
-      <div class="flex peer flex-col w-[264px] m-auto shadow-md rounded-md">
-        <div class="productImg">
-          <img src="/images/1.png" alt="" class="" />
+  <div class="w-full h-full flex justify-center items-center">
+    <div class="w-[264px] relative h-full">
+      <div class="flex peer flex-col w-[264px] justify-center items-center space-y-2  rounded-md">
+        <div class="flex justify-center items-center">
+          <img :src="'/product/' + imageUrl()" alt="" width="200" height="200" />
         </div>
         <div class="flex flex-col justify-center px-4 items-center gap-2">
           <div class="productName">
-            <p href="#" class="text-sm ss02 text-center">
+            <p href="#" class="text-sm ss02 text-center font-bold h-16 justify-center items-start flex">
               {{ title }}
             </p>
           </div>
-          <div class="productColor">
-            <div class="w-[15px] h-[15px] bg-black rounded-full"></div>
+          <div class="productColor flex flex-row space-x-2">
+            <div class="w-[15px] h-[15px] bg-black rounded-full" v-if="colorList().includes('Black')"></div>
+            <div class="w-[15px] h-[15px] bg-white rounded-full" v-if="colorList().includes('White')"></div>
+            <div class="w-[15px] h-[15px] bg-purple rounded-full" v-if="colorList().includes('Purple')"></div>
+            <div class="w-[15px] h-[15px] bg-olive rounded-full" v-if="colorList().includes('Olive')"></div>
+            <div class="w-[15px] h-[15px] bg-cream rounded-full" v-if="colorList().includes('Cream')"></div>
+            <div class="w-[15px] h-[15px] bg-gray rounded-full" v-if="colorList().includes('Gray')"></div>
+            <div class="w-[15px] h-[15px] bg-Sierrablue rounded-full" v-if="colorList().includes('Sierrablue')"></div>
+            <div class="w-[15px] h-[15px] bg-blue rounded-full" v-if="colorList().includes('Blue')"></div>
+            <div class="w-[15px] h-[15px] bg-Green rounded-full" v-if="colorList().includes('Green')"></div>
+            <div class="w-[15px] h-[15px] bg-Burgundy rounded-full" v-if="colorList().includes('Burgundy')"></div>
+            <div class="w-[15px] h-[15px] bg-Beige rounded-full" v-if="colorList().includes('Beige')"></div>
+            <div class="w-[15px] h-[15px] bg-brown rounded-full" v-if="colorList().includes('Brown')"></div>
+            <div class="w-[15px] h-[15px] bg-lime rounded-full" v-if="colorList().includes('Lime')"></div>
+            <div class="w-[15px] h-[15px] bg-silver rounded-full" v-if="colorList().includes('Silver')"></div>
           </div>
           <div class="productRating">
             <star-rating
@@ -73,10 +96,10 @@ export default {
           </div>
 
           <div
-            class="productPrice text-sm font-bold text-[#435fcb] text-right ss02 flex flex-row"
+            class="productPrice text-sm font-bold space-x-1 text-[#435fcb] text-right ss02 flex flex-row"
           >
             <div class="">تومان</div>
-            <div class="">{{ parseInt(price) }}</div>
+            <div class="">{{ Intl.NumberFormat('fa').format(price) }}</div>
           </div>
         </div>
       </div>

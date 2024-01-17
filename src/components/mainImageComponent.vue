@@ -5,7 +5,7 @@ import { Image } from "@unpic/vue";
 
 
 <template>
-    <div class="w-full flex flex-col justify-center items-center">
+    <div class="w-full flex flex-col justify-center items-center mb-28">
         <div class="w-[68%] py-5 pt-10 min-w-[1000px] flex flex-row justify-center items-center">
             <div class="w-[40%] flex flex-col h-full space-y-6 justify-center items-center ">
                 <div class="h-1/2 w-full flex min-w-[450px] flex-row justify-evenly items-center">
