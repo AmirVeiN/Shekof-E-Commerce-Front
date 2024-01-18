@@ -5,27 +5,27 @@
                 <div class="text-2xl font-extrabold text-blue {{ activeCount() }}">محصولات شکاف</div>
                 <div class="flex flex-row space-x-6 text-xl font-bold h-12">
                     <button @click="ChangeActive('Nokia'), getItem()"
-                        :class="count === 'Nokia' ? 'text-blue' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">نوکیا</button>
+                        :class="count === 'Nokia' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue">نوکیا</button>
                     <button @click="ChangeActive('Honor'), getItem()"
-                        :class="count === 'Honor' ? 'text-blue' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">آنر</button>
+                        :class="count === 'Honor' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue">آنر</button>
                     <button @click="ChangeActive('Huawei'), getItem()"
-                        :class="count === 'Huawei' ? 'text-blue' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">هوآوی</button>
+                        :class="count === 'Huawei' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue">هوآوی</button>
                     <button @click="ChangeActive('Xiaomi'), getItem()"
-                        :class="count === 'Xiaomi' ? 'text-blue' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">شیائومی</button>
+                        :class="count === 'Xiaomi' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue">شیائومی</button>
                     <button @click="ChangeActive('Samsung'), getItem()"
-                        :class="count === 'Samsung' ? 'text-blue' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">سامسونگ</button>
+                        :class="count === 'Samsung' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue ">سامسونگ</button>
                     <button @click="ChangeActive('Iphone'), getItem()"
-                        :class="count === 'Iphone' ? 'text-blue ' : 'text-gray'"
-                        class="text-2xl hover:border-b-2 border-blue">آیفون</button>
+                        :class="count === 'Iphone' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                        class="text-xl hover:border-b-2 border-blue">آیفون</button>
                 </div>
             </div>
             <div class="">
-                <carousel v-bind="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+                <carousel v-bind="settings" :breakpoints="breakpoints" >
                     <slide v-for="slide in items" :key="slide">
                         <SliderComponent :title="slide.Name" :likes="5" :price="slide.Price" :color="slide.InStockColor"
                             :stock="slide.InStock" :srcImg="slide.Image" />

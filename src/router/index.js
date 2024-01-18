@@ -14,15 +14,15 @@ const router = createRouter({
       component: homeVue,
     },
     {
-      path: "/prc",
-      name: "prc",
+      path: "/product",
+      name: "product",
       component: productVue,
     },
-    {
-      path: "/:category_slug/:product_slug/",
-      name: "Product",
-      component: productVue,
-    },
+    // {
+    //   path: "/:category_slug/:product_slug/",
+    //   name: "Product",
+    //   component: productVue,
+    // },
     { path: "/:notFound(.*)", redirect: "/home" },
   ],
   scrollBehavior(_, _2, savedPosition) {

@@ -5,18 +5,18 @@
                 <div class="text-2xl font-extrabold text-blue {{ activeCount() }}">برترین های شکاف</div>
                 <div class="flex flex-row space-x-6 text-xl font-bold h-12">
                     <button @click="ChangeActive('new'), getItem()"
-                        :class="count === 'new' ? 'text-blue' : 'text-gray'"
+                        :class="count === 'new' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                         class="text-xl hover:border-b-2 border-blue">جدید ترین ها</button>
                     <button @click="ChangeActive('bestSell'), getItem()"
-                        :class="count === 'bestSell' ? 'text-blue' : 'text-gray'"
+                        :class="count === 'bestSell' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                         class="text-xl hover:border-b-2 border-blue">پر تخفیف ترین ها</button>
                     <button @click="ChangeActive('sell'), getItem()"
-                        :class="count === 'sell' ? 'text-blue ' : 'text-gray'"
+                        :class="count === 'sell' ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                         class="text-xl hover:border-b-2 border-blue">پر فروش ترین ها</button>
                 </div>
             </div>
             <div class="">
-                <carousel v-bind="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+                <carousel v-bind="settings" :breakpoints="breakpoints">
                     <slide v-for="slide in items" :key="slide">
                         <SliderComponent :title="slide.Name" :likes="5" :price="slide.Price" :color="slide.InStockColor"
                             :stock="slide.InStock" :srcImg="slide.Image" />
