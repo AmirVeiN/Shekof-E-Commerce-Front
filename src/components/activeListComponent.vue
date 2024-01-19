@@ -27,7 +27,7 @@
             <div class="">
                 <carousel v-bind="settings" :breakpoints="breakpoints" >
                     <slide v-for="slide in items" :key="slide">
-                        <SliderComponent :title="slide.Name" :likes="5" :price="slide.Price" :color="slide.InStockColor"
+                        <SliderComponent :title="slide.Name" :slug="slide.Slug" :likes="slide.Star" :price="slide.Price" :color="slide.InStockColor"
                             :stock="slide.InStock" :srcImg="slide.Image" />
                     </slide>
                     <template #addons>

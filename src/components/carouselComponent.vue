@@ -63,7 +63,7 @@ import SliderComponent from "./sliderComponent.vue";
     <div class="w-[68%] min-w-[1000px]">
       <carousel v-bind="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
         <slide v-for="slide in latestProducts" :key="slide">
-          <SliderComponent :title="slide.Name" :likes="5" :price="slide.Price" :color="slide.InStockColor"
+          <SliderComponent :title="slide.Name" :slug="slide.Slug" :likes="slide.Star" :price="slide.Price" :color="slide.InStockColor"
             :stock="slide.InStock" :srcImg="slide.Image" />
         </slide>
         <template #addons>

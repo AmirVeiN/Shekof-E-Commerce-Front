@@ -18,12 +18,12 @@ const router = createRouter({
       name: "product",
       component: productVue,
     },
-    // {
-    //   path: "/:category_slug/:product_slug/",
-    //   name: "Product",
-    //   component: productVue,
-    // },
-    { path: "/:notFound(.*)", redirect: "/home" },
+    {
+      path: "/:product_slug/",
+      name: "Product",
+      component: productVue,
+    },
+    // { path: "/:notFound(.*)", redirect: "/home" },
   ],
   scrollBehavior(_, _2, savedPosition) {
     if (savedPosition) {
