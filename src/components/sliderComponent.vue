@@ -43,7 +43,7 @@ export default {
         </div>
         <div class="flex flex-col justify-center px-4 items-center gap-2">
           <div class="productName">
-            <p href="#" class="text-sm ss02 text-center font-bold h-16 justify-center items-start flex">
+            <p class="text-sm ss02 text-center font-medium h-16 justify-center items-start flex">
               {{ title }}
             </p>
           </div>
@@ -70,9 +70,9 @@ export default {
             </star-rating>
           </div>
           <div class="productStuck flex flex-row space-x-2">
-            <div class="flex flex-row gap-2" v-if="stockCheck()">
+            <div class="flex flex-row justify-center items-center space-x-2" v-if="stockCheck()">
               <div class="">
-                <h1 class="text-sm flex">موجود در انبار</h1>
+                <h1 class="text-sm font-medium flex">موجود در انبار</h1>
               </div>
               <div class="text-blue flex">
                 <font-awesome-icon icon="fa-solid fa-check" />

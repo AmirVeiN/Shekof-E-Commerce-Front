@@ -89,7 +89,6 @@ export default {
         async getItem() {
 
             await axios.get(`/api/v1/category-product/${this.count}`).then(response => {
-                console.log(response.data);
                 this.items = response.data
             })
                 .catch(error => {

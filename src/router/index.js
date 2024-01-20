@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import homeVue from "../views/home.vue";
 import productVue from "../views/product.vue";
+import allProductVue from "../views/allProduct.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -14,16 +15,16 @@ const router = createRouter({
       component: homeVue,
     },
     {
-      path: "/product",
-      name: "product",
-      component: productVue,
-    },
-    {
       path: "/:product_slug/",
       name: "Product",
       component: productVue,
     },
-    // { path: "/:notFound(.*)", redirect: "/home" },
+    {
+      path: "/allProduct/",
+      name: "allProduct",
+      component: allProductVue,
+    },
+    { path: "/:notFound(.*)", redirect: "/home" },
   ],
   scrollBehavior(_, _2, savedPosition) {
     if (savedPosition) {

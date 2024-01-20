@@ -15,7 +15,7 @@
             </div>
             <div class="flex flex-row-reverse h-full items-center">
                 <div class=" w-[450px] h-full flex flex-row-reverse justify-evenly items-center">
-                    <button class="text-gray font-semibold text-sm hover:text-blue">فروشگاه</button>
+                    <router-link to="/allProduct/" class="text-gray font-semibold text-sm hover:text-blue">فروشگاه</router-link>
                     <button class="text-gray font-semibold text-sm hover:text-blue">قوانین</button>
                     <button class="text-gray font-semibold text-sm hover:text-blue">مرجوعی</button>
                     <button class="text-gray font-semibold text-sm hover:text-blue">درباره ما</button>
@@ -23,7 +23,7 @@
                     <button class="text-gray font-semibold text-sm hover:text-blue">مجله</button>
                 </div>
                 <div class=" w-52 h-full flex justify-center items-center">
-                    <button class="text-sm font-semibold flex flex-row  text-blue">
+                    <button class="text-sm font-semibold flex flex-row space-x-1 text-blue">
                         <p class="">۰۲۱-۶۶۶-۸۸-۷۴۰</p>
                         <p class="">خط ویژه پشتیبانی</p>
                     </button>
