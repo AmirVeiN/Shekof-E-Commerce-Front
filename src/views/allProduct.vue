@@ -199,31 +199,31 @@
                     </div>
                     <div class="flex flex-row w-full justify-evenly h-32 ">
                         <div class="flex flex-col space-y-2">
-                            <button @click="ChangeInternal(16)"
-                                :class="Internal === 16 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(16)"
+                                :class="ram === 16 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>16</p>
                             </button>
-                            <button @click="ChangeInternal(3)"
-                                :class="Internal === 3 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(3)"
+                                :class="ram === 3 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>3</p>
                             </button>
-                            <button @click="ChangeInternal(4)"
-                                :class="Internal === 4 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(4)"
+                                :class="ram === 4 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>مگابایت</p>
                                 <p>4</p>
                             </button>
-                            <button @click="ChangeInternal(8)"
+                            <button @click="changeRam(8)"
                                 :class="ram === 8 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>8</p>
                             </button>
-                            <button @click="ChangeInternal(24)"
+                            <button @click="changeRam(24)"
                                 :class="ram === 24 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
@@ -231,32 +231,32 @@
                             </button>
                         </div>
                         <div class="flex flex-col space-y-2">
-                            <button @click="ChangeInternal(12)"
-                                :class="Internal === 12 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(12)"
+                                :class="ram === 12 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>12</p>
                             </button>
-                            <button @click="ChangeInternal(2)"
-                                :class="Internal === 2 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(2)"
+                                :class="ram === 2 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>2</p>
                             </button>
-                            <button @click="ChangeInternal(4)"
-                                :class="Internal === 4 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(4)"
+                                :class="ram === 4 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>4</p>
                             </button>
-                            <button @click="ChangeInternal(6)"
-                                :class="Internal === 6 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(6)"
+                                :class="ram === 6 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>گیگابایت</p>
                                 <p>6</p>
                             </button>
-                            <button @click="ChangeInternal(8)"
-                                :class="Internal === 8 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
+                            <button @click="changeRam(8)"
+                                :class="ram === 8 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
                                 <p>مگابایت</p>
                                 <p>8</p>
@@ -292,6 +292,7 @@ export default {
             inStock: ref(),
             priceMin: ref(),
             priceMax: ref(),
+            ram: ref(),
         }
     },
     components: {
@@ -302,6 +303,7 @@ export default {
         this.activeCount()
         this.ChangeBrand()
         this.ChangeInternal()
+        this.changeRam()
     },
     methods: {
         activeCount() {
@@ -319,6 +321,9 @@ export default {
         },
         ChangeInternal(Internal) {
             this.Internal = Internal;
+        },
+        changeRam(ram){
+            this.ram = ram;
         },
         async getItem() {
 

@@ -35,8 +35,8 @@ export default {
 
 </script>
 <template>
-  <div class="w-full h-full flex justify-center items-center">
-    <div class="w-[264px] relative h-full">
+  <div class="w-full h-full flex justify-center items-center ">
+    <div class="w-[264px] relative">
       <div class="flex peer flex-col w-[264px] justify-center items-center space-y-2  rounded-md">
         <div class="flex justify-center items-center">
           <img :src="'/product/' + imageUrl()" alt="" width="200" height="200" />
