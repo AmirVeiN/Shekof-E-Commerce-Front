@@ -160,12 +160,17 @@
         </div>
         <div class="flex flex-col">
           <label for="waranti">: گارانتی </label>
-          <select name="Waranti" id="waranti" class="border-[2px] border-gray p-2 rounded-xl cursor-pointer">
-            <option value="" disabled selected hidden class="cursor-pointer">
+          <select name="Waranti" id="waranti" class="border-[2px] border-gray select rounded-2xl cursor-pointer">
+            <option value="" disabled selected hidden >
               یک گزینه را انتخاب کنید
             </option>
-            <option value="waranti18">18 ماه گارانتی شرکتی+تضمین رجستری</option>
+            <option value="waranti18" class="">18 ماه گارانتی شرکتی + تضمین رجستری</option>
           </select>
+        </div>
+        <div class="flex justify-center items-center">
+          <button @click="counter('+')" class="p-2 border-black border-2 rounded-l-3xl">+</button>
+          <p class="py-2 border-y-2 border-black w-8 text-center ">{{ count }}</p>
+          <button @click="counter('-')" class="p-2 border-black border-2 rounded-r-3xl">-</button>
         </div>
       </div>
     </div>
@@ -191,6 +196,7 @@ export default defineComponent({
   data: () => ({
     currentSlide: 0,
     product: [],
+    count:1,
   }),
   mounted() {
     this.getProduct();
@@ -225,6 +231,13 @@ export default defineComponent({
       const colorList = colors.split(",");
       return colorList;
     },
+    counter(arg){
+      if(arg==='+')
+      this.count++
+      else
+      this.count >= 2 ? this.count--: 0
+
+    }
   },
 });
 </script>
