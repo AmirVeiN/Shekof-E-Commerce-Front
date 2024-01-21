@@ -4,7 +4,7 @@ export default {
   theme: {
     colors: {
       "black": "#000000",
-      "blue": "#2A52D1",
+      "blue": "#435fcb",
       "transparent": 'transparent',
       'white': '#ffffff',
       'purple': '#3f3cbb',
