@@ -271,15 +271,64 @@
         <div
           class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
         >
-          <div class="flex flex-row space-x-1 text-blue">
-            <p>{{ product.Networks }}</p>
+          <div class="flex flex-row space-x-1 gap-3">
+            <font-awesome-icon
+              class="text-base text-[#333]/70 cursor-pointer hover:text-[#333]"
+              icon="fa-brands fa-telegram"
+            />
+            <font-awesome-icon
+              class="text-base text-[#333]/70 cursor-pointer hover:text-[#333]"
+              icon="fa-brands fa-linkedin-in"
+            />
+            <font-awesome-icon
+              class="text-base text-[#333]/70 cursor-pointer hover:text-[#333]"
+              icon="fa-brands fa-pinterest"
+            />
+            <font-awesome-icon
+              class="text-base text-[#333]/70 cursor-pointer hover:text-[#333]"
+              icon="fa-brands fa-twitter"
+            />
+            <font-awesome-icon
+              class="text-base text-[#333]/70 cursor-pointer hover:text-[#333]"
+              icon="fa-brands fa-facebook-f"
+            />
           </div>
           <p>: اشتراک گذاری</p>
         </div>
       </div>
     </div>
-    <div></div>
   </div>
+  <div class="divide-y-[1px] pt-9  divide-[lightgray]">
+    <p></p>
+    <p></p>
+  </div>
+  <div class="flex justify-center items-center h-full">
+    <div
+      class="flex flex-row-reverse w-[70%] gap-8 items-center pt-7 font-bold text-[#c7c7c7]"
+    >
+      <button
+        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-[#333]"
+      >
+        توضیحات
+      </button>
+      <button
+        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-[#333]"
+      >
+        مشخصات کلی
+      </button>
+      <button
+        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-[#333]"
+      >
+        نظرات (0)
+      </button>
+      <button
+        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-[#333]"
+      >
+        شرایط گارانتی
+      </button>
+    </div>
+  </div>
+  <footerCmponent />
 </template>
 
 <script>
@@ -345,4 +394,5 @@ export default defineComponent({
 
 <script setup>
 import headerComponent from "../components/headerComponent.vue";
+import footerCmponent from "@/components/footerCmponent.vue";
 </script>

@@ -42,7 +42,7 @@
                     <img src="/footer/Gifts.svg" alt="">
                 </div>
             </div>
-            <div class="divide-y-2 divide-black min-w-[1300px]">
+            <div class="divide-y-[1px] divide-[lightgray] ">
                 <p></p>
                 <p></p>
             </div>
