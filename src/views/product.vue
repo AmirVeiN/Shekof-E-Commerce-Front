@@ -90,59 +90,59 @@
         <p>رنگ ها</p>
         <div class="productColor flex flex-row space-x-2">
           <div
-            class="w-[20PX] h-[20PX] bg-black rounded-full"
+            class="w-[24px] h-[24px] bg-[#37363b] rounded-full shadow-md"
             v-if="colorList().includes('Black')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-gray/20 rounded-full"
-            v-if="colorList().includes('White')"
-          ></div>
-          <div
-            class="w-[20PX] h-[20PX] bg-purple rounded-full"
-            v-if="colorList().includes('Purple')"
-          ></div>
-          <div
-            class="w-[20PX] h-[20PX] bg-olive rounded-full"
+            class="w-[24px] h-[24px] bg-[#a4a28c] rounded-full shadow-md"
             v-if="colorList().includes('Olive')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-cream rounded-full"
+            class="w-[24px] h-[24px] bg-[#b3abbd] rounded-full shadow-md"
+            v-if="colorList().includes('Purple')"
+          ></div>
+          <div
+            class="w-[24px] h-[24px] bg-[#f2f2f2] rounded-full shadow-md"
+            v-if="colorList().includes('White')"
+          ></div>
+          <div
+            class="w-[24px] h-[24px] bg-cream rounded-full shadow-md"
             v-if="colorList().includes('Cream')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-gray rounded-full"
+            class="w-[24px] h-[24px] bg-gray rounded-full shadow-md"
             v-if="colorList().includes('Gray')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-Sierrablue rounded-full"
+            class="w-[24px] h-[24px] bg-Sierrablue rounded-full shadow-md"
             v-if="colorList().includes('Sierrablue')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-blue rounded-full"
+            class="w-[24px] h-[24px] bg-[#428aae] rounded-full shadow-md"
             v-if="colorList().includes('Blue')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-Green rounded-full"
+            class="w-[24px] h-[24px] bg-[#60765f] rounded-full shadow-md"
             v-if="colorList().includes('Green')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-Burgundy rounded-full"
+            class="w-[24px] h-[24px] bg-Burgundy rounded-full shadow-md"
             v-if="colorList().includes('Burgundy')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-Beige rounded-full"
+            class="w-[24px] h-[24px] bg-Beige rounded-full shadow-md"
             v-if="colorList().includes('Beige')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-brown rounded-full"
+            class="w-[24px] h-[24px] bg-brown rounded-full shadow-md"
             v-if="colorList().includes('Brown')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-lime rounded-full"
+            class="w-[24px] h-[24px] bg-lime rounded-full shadow-md"
             v-if="colorList().includes('Lime')"
           ></div>
           <div
-            class="w-[20PX] h-[20PX] bg-silver rounded-full"
+            class="w-[24px] h-[24px] bg-silver rounded-full shadow-md"
             v-if="colorList().includes('Silver')"
           ></div>
         </div>
@@ -298,7 +298,7 @@
       </div>
     </div>
   </div>
-  <div class="divide-y-[1px] pt-9  divide-[lightgray]">
+  <div class="divide-y-[1px] pt-9 divide-[lightgray]">
     <p></p>
     <p></p>
   </div>
