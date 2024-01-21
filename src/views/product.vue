@@ -106,7 +106,7 @@
             v-if="colorList().includes('White')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-cream rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-[#f7f1e8] rounded-full shadow-md"
             v-if="colorList().includes('Cream')"
           ></div>
           <div
