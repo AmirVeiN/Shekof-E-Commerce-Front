@@ -4,9 +4,12 @@ export default {
   theme: {
     colors: {
       black: "#000000",
+      balckPhone: "#37363b",
       blue: "#435fcb",
+      bluePhone: "#428aae",
       transparent: "transparent",
       white: "#ffffff",
+      whitePhone: "#f2f2f2",
       purple: "#3f3cbb",
       midnight: "#121063",
       metal: "#565584",

@@ -36,7 +36,7 @@
         </Carousel>
       </div>
       <div
-        class="w-[70%] justify-start items-end flex flex-col shadow-md rounded-lg shadow-[lightgray] px-8 pt-7 pb-4 space-y-5 text-right"
+        class="w-[70%] justify-start items-end flex flex-col shadow-md rounded-lg shadow-[lightgray] px-8 pt-7 pb-4 space-y-5 text-right mr-6"
       >
         <p class="font-bold pname text-lg">{{ product.Name }}</p>
         <div class="font-bold text-blue text-[21px] flex flex-row space-x-1">
@@ -96,59 +96,87 @@
         <p>رنگ ها</p>
         <div class="productColor flex flex-row space-x-2">
           <div
-            class="w-[24px] h-[24px] bg-[#37363b] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-balckPhone rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="مشکی"
             v-if="colorList().includes('Black')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#a4a28c] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-olive rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="زیتونی"
             v-if="colorList().includes('Olive')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#b3abbd] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-purple rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="بنفش"
             v-if="colorList().includes('Purple')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#f2f2f2] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-whitePhone rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="سفید"
             v-if="colorList().includes('White')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#f7f1e8] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-cream rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="کرمی"
             v-if="colorList().includes('Cream')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-gray rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="خاکستری"
             v-if="colorList().includes('Gray')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-Sierrablue rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="آبی اقیانوسی"
             v-if="colorList().includes('Sierrablue')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#428aae] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-bluePhone rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="آبی"
             v-if="colorList().includes('Blue')"
           ></div>
           <div
-            class="w-[24px] h-[24px] bg-[#60765f] rounded-full shadow-md"
+            class="w-[24px] h-[24px] bg-green rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="سبز"
             v-if="colorList().includes('Green')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-Burgundy rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="شرابی"
             v-if="colorList().includes('Burgundy')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-Beige rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="بژ"
             v-if="colorList().includes('Beige')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-brown rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="قهوه‌ای"
             v-if="colorList().includes('Brown')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-lime rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="لیمویی"
             v-if="colorList().includes('Lime')"
           ></div>
           <div
             class="w-[24px] h-[24px] bg-silver rounded-full shadow-md"
+            data-tooltip-target="tooltip-color"
+            title="نقره‌ای"
             v-if="colorList().includes('Silver')"
           ></div>
         </div>
