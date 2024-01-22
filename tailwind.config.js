@@ -13,6 +13,7 @@ export default {
       tahiti: "#3ab7bf",
       silver: "#ecebff",
       gray: "#808080",
+      graphite: "#5c5b57",
       "bubble-gum": "#ff77e9",
       bermuda: "#78dcca",
       purple: "#b3abbd",
