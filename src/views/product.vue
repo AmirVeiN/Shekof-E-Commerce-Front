@@ -190,7 +190,7 @@
             </button>
           </div>
         </div>
-        <div class="flex gap-9">
+        <div class="flex gap-9 dirrtl">
           <div class="flex flex-row gap-4 justify-center items-center">
             <div class="text-right w-full flex space-y-3 flex-col">
               <p class="text-blue font-bold text-sm">پرداخت آنلاین امن</p>
