@@ -10,8 +10,14 @@
           v-model="currentSlide"
         >
           <Slide v-for="slide in imageUrl()" :key="slide">
-            <div class="carousel__item">
-              <img :src="'/product/' + slide" alt="" />
+            <div
+              class="carousel__item relative max-w-xs overflow-hidden bg-cover bg-no-repeat"
+            >
+              <img
+                :src="'/product/' + slide"
+                alt=""
+                class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+              />
             </div>
           </Slide>
         </Carousel>
