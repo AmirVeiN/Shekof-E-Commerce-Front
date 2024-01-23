@@ -97,7 +97,7 @@ export default {
       <div
         class="hidden peer-hover:flex hover:flex justify-around items-center flex-col absolute top-3 left-3 bg-white w-[50px] h-[135px] shadow-md rounded-md">
         <button>
-          <router-link v-bind:to="slug" class="button is-dark mt-4">
+          <router-link v-bind:to="'/'+ slug" class="button is-dark mt-4">
             <font-awesome-icon icon="fa-solid fa-cart-shopping"
               class="text-xl text-gray hover:text-black" />
             </router-link>

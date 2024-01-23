@@ -24,27 +24,37 @@
                             </button>
                         </div>
                     </div>
-                    <div>
-                        <p class="font-bold text-xl">فروشگاه</p>
-                    </div>
+
+                    <p class="font-bold text-xl">فروشگاه</p>
+
                 </div>
                 <div :class='count === 4 ? "grid-cols-4 gap-y-10 gap-x-6" : "",
                     count === 3 ? "grid-cols-3 gap-y-10 gap-x-4" : "",
-                    count === 2 ? "grid-cols-2 gap-y-10" : ""' class='grid w-full'>
+                    count === 2 ? "grid-cols-2 gap-y-10" : ""' class='grid w-full '>
                     <div v-for="slide in items" :key="slide">
                         <SliderComponent :title="slide.Name" :slug="slide.Slug" :likes="slide.Star" :price="slide.Price"
                             :color="slide.InStockColor" :stock="slide.InStock" :srcImg="slide.Image" />
                     </div>
                 </div>
+                <div v-show="empty" class="h-full w-full justify-center items-center flex flex-col">
+                    <img src="/NotFound.png" alt="" width="480">
+                    <p class="font-bold text-black/70">محصول مورد نظر شما یافت نشد</p>
+                </div>
             </div>
-            <div class="flex w-[24%] flex-col justify-start space-y-10 items-center mb-12">
+            <div class="flex w-[24%] flex-col justify-center space-y-4 items-center mb-12">
+                <div class="flex w-full h-32 justify-center items-end pb-2 ">
+                    <button @click="getItemFilter()"
+                        class="text-white font-bold bg-black/90 rounded-xl w-64 h-10 flex justify-center items-center shadow-md shadow-black/20">
+                        اعمال تغییرات
+                    </button>
+                </div>
                 <div class="flex flex-col w-full h-32 justify-evenly items-center shadow-md shadow-black/20">
                     <div class="text-white font-bold bg-blue rounded-xl w-64 h-10 flex justify-end items-center pr-6">
                         وضعیت موجودی
                     </div>
                     <div class="flex flex-row space-x-2 justify-end items-center w-64 pr-2 text-gray font-medium">
-                        <label for="inStock">موجود در انبار</label>
                         <input type="checkbox" id="inStock" value="inStock" v-model="inStock">
+                        <label for="inStock">موجود در انبار</label>
                     </div>
                 </div>
                 <div class="flex flex-col w-full h-60 justify-evenly items-center shadow-md shadow-black/20">
@@ -211,12 +221,6 @@
                                 <p>گیگابایت</p>
                                 <p>3</p>
                             </button>
-                            <button @click="changeRam(4)"
-                                :class="ram === 4 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
-                                class="text-base  flex flex-row space-x-1">
-                                <p>مگابایت</p>
-                                <p>4</p>
-                            </button>
                             <button @click="changeRam(8)"
                                 :class="ram === 8 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
                                 class="text-base  flex flex-row space-x-1">
@@ -255,12 +259,6 @@
                                 <p>گیگابایت</p>
                                 <p>6</p>
                             </button>
-                            <button @click="changeRam(8)"
-                                :class="ram === 8 ? 'text-blue border-b-2 border-blue' : 'text-gray'"
-                                class="text-base  flex flex-row space-x-1">
-                                <p>مگابایت</p>
-                                <p>8</p>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -288,6 +286,7 @@ export default {
             items: [],
             count: ref(),
             brand: ref(),
+            empty: ref(),
             Internal: ref(),
             inStock: ref(),
             priceMin: ref(),
@@ -308,8 +307,10 @@ export default {
     methods: {
         activeCount() {
             this.count = 4;
-            this.brand = "";
-            this.Internal = "";
+            this.brand = '';
+            this.inStock = true;
+            this.Internal = '';
+            this.ram = '';
             this.priceMin = 5000000;
             this.priceMax = 70000000;
         },
@@ -322,19 +323,50 @@ export default {
         ChangeInternal(Internal) {
             this.Internal = Internal;
         },
-        changeRam(ram){
+        changeRam(ram) {
             this.ram = ram;
         },
+
         async getItem() {
 
-            await axios.get(`/api/v1/all-products/`).then(response => {
+            await axios.get('/api/v1/allProducts/').then(response => {
                 this.items = response.data
+                if (this.items.length < 1 || this.items == undefined) {
+                    this.empty = true
+                }
+                else {
+                    this.empty = false
+                }
+            })
+                .catch(error => {
+                    console.log(error)
+                })
+        },
+
+        async getItemFilter() {
+
+            function Stock(a) {
+                if (a === true)
+                    return 1
+                else
+                    return 0;
+            }
+
+            await axios.get(`/api/v1/ProductsFilter/?inStock=${Stock(this.inStock)}&brand=${this.brand}&ram=${this.ram}&min=${this.priceMin}&max=${this.priceMax}&Internal=${this.Internal}`).then(response => {
+                this.items = response.data
+                if (this.items.length < 1 || this.items == undefined) {
+                    this.empty = true
+                }
+                else {
+                    this.empty = false
+                }
             })
                 .catch(error => {
                     console.log(error)
                 })
 
         },
+
     },
 }
 </script>

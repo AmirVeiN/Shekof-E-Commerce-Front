@@ -9,7 +9,8 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faYoutube , faTwitter , faPinterest , faLinkedin , faFacebook , faTelegram , faWhatsapp , faInstagram ,faLinkedinIn,faFacebookF } from '@fortawesome/free-brands-svg-icons'
 
 import axios from "axios"
-axios.defaults.baseURL= 'https://shekaf.liara.run'
+// axios.defaults.baseURL= 'https://shekaf.liara.run'
+axios.defaults.baseURL= 'http://127.0.0.1:8000'
 
 library.add(faCartShopping, faHeart, faShuffle, faChevronLeft, faMagnifyingGlass, faAngleDown, faBars , faCheck , faYoutube , faTwitter , 
     faPinterest , faLinkedin , 
