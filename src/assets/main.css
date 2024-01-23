@@ -28,9 +28,7 @@ select {
 .pname{
   direction:rtl ;
 }
-.dirrtl{
-  direction: rtl;
-}
+
 /* Custom arrow */
 select {
   /* background-image: url("/public/images/expand_more_FILL0_wght400_GRAD0_opsz24.svg"); */
