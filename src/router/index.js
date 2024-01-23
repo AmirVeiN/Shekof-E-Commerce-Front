@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import homeVue from "../views/home.vue";
 import productVue from "../views/product.vue";
 import allProductVue from "../views/allProduct.vue";
+import priceList from "../views/priceList.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,6 +25,11 @@ const router = createRouter({
       path: "/allProduct/",
       name: "allProduct",
       component: allProductVue,
+    },
+    {
+      path: "/priceList/",
+      name: "priceList",
+      component: priceList,
     },
     { path: "/:notFound(.*)", redirect: "/home" },
   ],

@@ -329,18 +329,37 @@ export default {
 
         async getItem() {
 
-            await axios.get('/api/v1/allProducts/').then(response => {
-                this.items = response.data
-                if (this.items.length < 1 || this.items == undefined) {
-                    this.empty = true
-                }
-                else {
-                    this.empty = false
-                }
-            })
-                .catch(error => {
-                    console.log(error)
+            if (this.$route.query.search) {
+                await axios.get(`/api/v1/search/?query=${this.$route.query.search}`).then(response => {
+                    this.items = response.data
+                    if (this.items.length < 1 || this.items == undefined) {
+                        this.empty = true
+                    }
+                    else {
+                        this.empty = false
+                    }
                 })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            }
+
+            else {
+
+                await axios.get('/api/v1/allProducts/').then(response => {
+                    this.items = response.data
+                    if (this.items.length < 1 || this.items == undefined) {
+                        this.empty = true
+                    }
+                    else {
+                        this.empty = false
+                    }
+                })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            }
+
         },
 
         async getItemFilter() {
