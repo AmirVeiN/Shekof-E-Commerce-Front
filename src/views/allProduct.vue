@@ -329,7 +329,37 @@ export default {
 
         async getItem() {
 
-            if (this.$route.query.search) {
+            if (this.$route.query.Category) {
+                await axios.get(`/api/v1/search/?Category=${this.$route.query.Category}`).then(response => {
+                    this.items = response.data
+                    if (this.items.length < 1 || this.items == undefined) {
+                        this.empty = true
+                    }
+                    else {
+                        this.empty = false
+                    }
+                })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            }
+
+            else if (this.$route.query.Brand) {
+                await axios.get(`/api/v1/search/?Brand=${this.$route.query.Brand}`).then(response => {
+                    this.items = response.data
+                    if (this.items.length < 1 || this.items == undefined) {
+                        this.empty = true
+                    }
+                    else {
+                        this.empty = false
+                    }
+                })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            }
+
+            else if (this.$route.query.search) {
                 await axios.get(`/api/v1/search/?query=${this.$route.query.search}`).then(response => {
                     this.items = response.data
                     if (this.items.length < 1 || this.items == undefined) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-40 w-full flex flex-col justify-center items-center">
+  <div class="h-40 w-full flex flex-col justify-center items-center z-10">
     <div class="h-1/2 w-[68%] min-w-[1000px] flex flex-row-reverse items-center justify-between">
       <div class="flex flex-row items-center h-full space-x-3">
         <div class="w-36 h-full flex flex-row space-x-3 items-center justify-end">
@@ -48,167 +48,167 @@
           <font-awesome-icon icon="fa-solid fa-bars" />
         </button>
         <div
-          class="hidden peer-hover:flex hover:flex absolute top-36 border border-gray/40 shadow-sm shadow-gray bg-white w-64">
+          class="hidden peer-hover:flex hover:flex absolute top-36 border border-gray/40 shadow-sm shadow-gray bg-white w-64 z-20">
           <ul class="w-full">
             <div>
-              <button
+              <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Mobile' } }"
                 class="flex flex-row w-full peer relative justify-between items-center p-5 text-gray hover:text-black border-gray border-b-2">
                 <font-awesome-icon icon="fa-solid fa-chevron-left" />
                 <p class="hover:pr-3 delay-75 duration-150">گوشی موبایل</p>
-              </button>
+              </RouterLink>
               <div
                 class="hidden peer-hover:flex hover:flex absolute top-3 -left-64 rounded-2xl shadow-md shadow-gray bg-white w-64">
                 <ul class="w-full">
-                  <button class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Iphone' } }" class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       اپل
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Samsung' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       سامسونگ
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Xiaomi' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       شیائومی
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Huawei' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       هوآوی
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Honor' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       آنر
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Nokia' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       نوکیا
                     </p>
-                  </button>
+                  </RouterLink>
                 </ul>
               </div>
             </div>
             <div>
-              <button
+              <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Laptop' } }"
                 class="flex flex-row w-full peer relative justify-between items-center p-5 text-gray hover:text-black border-gray border-b-2">
                 <font-awesome-icon icon="fa-solid fa-chevron-left" />
                 <p class="hover:pr-3 delay-75 duration-150">لپ تاپ</p>
-              </button>
+              </RouterLink>
               <div
                 class="hidden peer-hover:flex hover:flex absolute top-14 -left-64 rounded-2xl shadow-md shadow-gray bg-white w-64">
                 <ul class="w-full">
-                  <button class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Asus' } }" class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       ایسوس
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Lenovo' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       لنوو
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Samsung' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       سامسونگ
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Acer' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       ایسر
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Xiaomi' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       شیائومی
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Razer' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       ریزر
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Dell' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       دل
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Microsoft' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       مایکروسافت
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Huawei' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       هوآوی
                     </p>
-                  </button>
+                  </RouterLink>
                 </ul>
               </div>
             </div>
             <div>
-              <button
+              <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Watch' } }"
                 class="flex flex-row w-full peer relative justify-between items-center p-5 text-gray hover:text-black border-gray border-b-2">
                 <font-awesome-icon icon="fa-solid fa-chevron-left" />
                 <p class="hover:pr-3 delay-75 duration-150">ساعت هوشمند</p>
-              </button>
+              </RouterLink>
               <div
                 class="hidden peer-hover:flex hover:flex absolute top-32 -left-64 rounded-2xl shadow-md shadow-gray bg-white w-64">
                 <ul class="w-full">
-                  <button class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Apple' } }" class="flex flex-row w-full justify-start items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       اپل
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Samsung' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       سامسونگ
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Xiaomi' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       شیائومی
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Emzifit' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       امزیفیت
                     </p>
-                  </button>
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  </RouterLink>
+                  <RouterLink :to="{ path: '/allProduct/', query: { Brand: 'Huawei' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       هوآوی
                     </p>
-                  </button>
+                  </RouterLink>
                 </ul>
               </div>
             </div>
             <div>
-              <button
+              <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Others' } }"
                 class="flex flex-row w-full peer relative justify-between items-center p-5 text-gray hover:text-black border-gray border-b-2">
                 <font-awesome-icon icon="fa-solid fa-chevron-left" />
                 <p class="hover:pr-3 delay-75 duration-150">لوازم جانبی</p>
-              </button>
+              </RouterLink>
               <div
                 class="hidden peer-hover:flex hover:flex absolute top-48 -left-64 rounded-2xl shadow-md shadow-gray bg-white w-64">
                 <ul class="w-full">
-                  <button class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
+                  <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Charger' } }" class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black">
                     <p class="hover:pr-3 delay-75 duration-150 w-full text-right">
                       شارژر
                     </p>
-                  </button>
+                  </RouterLink>
                 </ul>
               </div>
             </div>
-            <button
+            <RouterLink :to="{ path: '/allProduct/', query: { Category: 'Tablet' } }"
               class="flex flex-row w-full justify-between items-center p-5 text-gray hover:text-black border-gray border-b-2">
               <p class="hover:pr-3 w-full text-right delay-75 duration-150">
                 تبلت
               </p>
-            </button>
+            </RouterLink>
           </ul>
         </div>
         <div class="w-[1%] text-gray/50">|</div>
@@ -270,6 +270,7 @@
 <script >
 import { ref } from 'vue'
 import axios from 'axios'
+import { RouterLink } from 'vue-router';
 
 
 export default {
@@ -279,7 +280,8 @@ export default {
     }
   },
   components: {
-  },
+    RouterLink
+},
   mounted() {
 
   },
