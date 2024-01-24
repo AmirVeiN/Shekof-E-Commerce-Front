@@ -161,7 +161,7 @@
             <select
               name="Waranti"
               id="waranti"
-              class="cursor-pointer block outline-none border-2 rounded-3xl w-72 p-2 text-sm border-lightergray text-ultragray"
+              class="prudoctselect cursor-pointer block outline-none border-2 rounded-3xl w-72 p-2 text-sm border-lightergray text-ultragray"
             >
               <option value="" disabled selected hidden>
                 یک گزینه را انتخاب کنید
