@@ -3,6 +3,6 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <router-view :key="$route.path"/>
 </template>
 
