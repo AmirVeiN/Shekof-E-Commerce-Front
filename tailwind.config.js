@@ -61,6 +61,7 @@ export default {
       submitgray: "#f3f3f3",
       purewhite: "#fff",
       lighterwhiter: "#F9FAFB",
+      textgray: "#777",
     },
     extend: {},
   },
