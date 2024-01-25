@@ -8,9 +8,6 @@ import Login from "../views/Login.vue";
 import signUp from "../views/signUp.vue";
 import refundVue from "@/views/refund.vue";
 import aboutUsVue from "@/views/aboutUs.vue";
-import contactUsVue from "../views/contactUs.vue";
-import Login from "../views/Login.vue";
-import signUp from "../views/signUp.vue";
 import rules from "@/views/rules.vue";
 const router = createRouter({
   history: createWebHistory(),
