@@ -3,9 +3,11 @@ import homeVue from "../views/home.vue";
 import productVue from "../views/product.vue";
 import allProductVue from "../views/allProduct.vue";
 import priceList from "../views/priceList.vue";
-import contactUsVue from "../views/contactUs.vue"
-import Login from "../views/Login.vue"
-import signUp from "../views/signUp.vue"
+import contactUsVue from "../views/contactUs.vue";
+import Login from "../views/Login.vue";
+import signUp from "../views/signUp.vue";
+import refundVue from "@/views/refund.vue";
+import aboutUsVue from "@/views/aboutUs.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -37,12 +39,22 @@ const router = createRouter({
     {
       path: "/Login",
       name: "Login",
-      component: Login ,
+      component: Login,
     },
     {
       path: "/Signup",
       name: "signup",
-      component: signUp  ,
+      component: signUp,
+    },
+    {
+      path: "/refund",
+      name: "refund",
+      component: refundVue,
+    },
+    {
+      path: "/aboutUs",
+      name: "aboutUs",
+      component: aboutUsVue,
     },
     { path: "/:notFound(.*)", redirect: "/home" },
   ],
