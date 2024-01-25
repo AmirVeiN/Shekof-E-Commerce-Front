@@ -3,9 +3,11 @@ import homeVue from "../views/home.vue";
 import productVue from "../views/product.vue";
 import allProductVue from "../views/allProduct.vue";
 import priceList from "../views/priceList.vue";
-import contactUsVue from "@/views/contactUs.vue";
+import contactUsVue from "../views/contactUs.vue"
+import Login from "../views/Login.vue"
+import signUp from "../views/signUp.vue"
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
@@ -31,6 +33,16 @@ const router = createRouter({
       path: "/priceList/",
       name: "priceList",
       component: priceList,
+    },
+    {
+      path: "/Login",
+      name: "Login",
+      component: Login ,
+    },
+    {
+      path: "/Signup",
+      name: "signup",
+      component: signUp  ,
     },
     { path: "/:notFound(.*)", redirect: "/home" },
   ],
