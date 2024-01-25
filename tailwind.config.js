@@ -60,7 +60,8 @@ export default {
       ultrablack: "#242424",
       submitgray: "#f3f3f3",
       purewhite: "#fff",
-      lighterwhiter:'#F9FAFB'
+      lighterwhiter: "#F9FAFB",
+      textgray: "#777",
     },
     extend: {},
   },

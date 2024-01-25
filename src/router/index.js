@@ -6,6 +6,7 @@ import priceList from "../views/priceList.vue";
 import contactUsVue from "../views/contactUs.vue"
 import Login from "../views/Login.vue"
 import signUp from "../views/signUp.vue"
+import rules from "@/views/rules.vue"
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -18,7 +19,16 @@ const router = createRouter({
       name: "home",
       component: homeVue,
     },
-    { path: "/contactUs", name: "contactUs", component: contactUsVue },
+    {
+      path: "/rules",
+      name: "rules",
+      component: rules,
+    },
+    {
+      path: "/contactUs",
+      name: "contactUs",
+      component: contactUsVue
+    },
     {
       path: "/:product_slug/",
       name: "Product",
@@ -44,7 +54,10 @@ const router = createRouter({
       name: "signup",
       component: signUp  ,
     },
-    { path: "/:notFound(.*)", redirect: "/home" },
+    { 
+     path: "/:notFound(.*)",
+     redirect: "/home" 
+    },
   ],
   scrollBehavior(_, _2, savedPosition) {
     if (savedPosition) {
