@@ -16,14 +16,18 @@ const router = createRouter({
       name: "home",
       component: homeVue,
     },
-    { path: "/contactUs", name: "contactUs", component: contactUsVue },
+    { 
+      path: "/contactUs", 
+      name: "contactUs", 
+      component: contactUsVue 
+    },
     {
       path: "/:product_slug/",
       name: "Product",
       component: productVue,
     },
     {
-      path: "/allProduct/",
+      path: "/allProduct",
       name: "allProduct",
       component: allProductVue,
     },
