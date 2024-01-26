@@ -14,9 +14,9 @@
       </P>
     </div>
     <div class="text-right mb-5">
-      <p class="text-2xl font-medium text-ultrablue mb-5">
-        خوشحالیم که ما را انتخاب کرده‌اید​
-      </p>
+      <h2 class="text-2xl font-medium text-ultrablue mb-5">
+        خوشحh2لیم که ما را انتخاب کرده‌اید​
+      </h2>
       <p class="text-gray text-sm">
         اگر سؤال یا مشکلی یا شکایتی دارید، خوشحال می‌شویم که با ما در تماس
         باشید. شکاف هرروز هفته از ساعت 9 تا 21 به همه سؤالات شما پاسخگوست. در
@@ -29,20 +29,20 @@
     </p>
     <div class="text-right flex mb-5">
       <div class="w-[50%] bg-tahiti">
-        <p class="text-2xl font-medium text-ultrablue mb-5">دفتر مرکزی</p>
+        <h2 class="text-2xl font-medium text-ultrablue mb-5">دفتر مرکزی</h2>
         <p class="text-gray text-sm">تهران، میدان ولی‌عصر، خیابان رودسر</p>
       </div>
       <div class="w-[50%] bg-bubbleGum">
-        <p class="text-2xl font-medium text-ultrablue mb-5">توزیع و پخش</p>
+        <h2 class="text-2xl font-medium text-ultrablue mb-5">توزیع و پخش</h2>
         <p class="text-gray text-sm">
           تهران- مهرآباد جنوبی-خیابان توکلی- خیابان میرقادری – پلاک 19 واحد 3
         </p>
       </div>
     </div>
     <div class="flex flex-col">
-      <p class="text-2xl font-medium text-ultrablue mb-5">
-        تماس با ما از طریق ایمیل:
-      </p>
+      <h2 class="text-2xl font-medium text-ultrablue mb-5">
+        تماسh2با ما از طریق ایمیل:
+      </h2>
       <p class="text-gray text-sm mb-5">
         اگر تمایل به ارسال مستقیم ایمیل دارید، می‌توانید از طریق ایمیل‌های زیر
         با ما در ارتباط باشید.
@@ -57,9 +57,9 @@
       <p class="text-gray text-sm mb-5">ایمیل فروشگاه: sale@shekaf.org</p>
     </div>
     <div class="flex flex-col dir">
-      <p class="text-2xl font-medium text-ultrablue mb-5">
-        تماس با ما از طریق تماس تلفنی:
-      </p>
+      <h2 class="text-2xl font-medium text-ultrablue mb-5">
+        تماسh2با ما از طریق تماس تلفنی:
+      </h2>
       <p class="text-gray text-sm mb-5">
         لطفاً پیش از ارسال ایمیل یا تماس تلفنی، ابتدا پرسش‌‌های متداول را مشاهده
         کنید.
@@ -87,9 +87,9 @@
       </div>
     </div>
     <div class="mb-5">
-      <p class="text-2xl font-medium text-ultrablue mb-5">
-        تماس با ما از طریق شبکه های اجتماعی:
-      </p>
+      <h2 class="text-2xl font-medium text-ultrablue mb-5">
+        تماسh2با ما از طریق شبکه های اجتماعی:
+      </h2>
       <p class="text-gray text-sm mb-5">ما را در شبکه های اجتماعی ببینید.</p>
       <div
         dir="ltr"
@@ -130,9 +130,9 @@
       </div>
     </div>
     <div>
-      <p class="text-2xl font-medium text-ultrablue mb-5">
-        تماس با ما از طریق فرم تماس:
-      </p>
+      <h2 class="text-2xl font-medium text-ultrablue mb-5">
+        تماسh2با ما از طریق فرم تماس:
+      </h2>
       <p class="text-gray text-sm mb-5">
         در صورت نیاز به ارتباط سریع‌تر با ما می‌توانید از طریق فرم زیر درخواست
         خود را ارسال نمایید.
