@@ -3,9 +3,14 @@ import homeVue from "../views/home.vue";
 import productVue from "../views/product.vue";
 import allProductVue from "../views/allProduct.vue";
 import priceList from "../views/priceList.vue";
-import contactUsVue from "@/views/contactUs.vue";
+import contactUsVue from "../views/contactUs.vue";
+import Login from "../views/Login.vue";
+import signUp from "../views/signUp.vue";
+import refundVue from "@/views/refund.vue";
+import aboutUsVue from "@/views/aboutUs.vue";
+import rules from "@/views/rules.vue";
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
@@ -36,7 +41,30 @@ const router = createRouter({
       name: "priceList",
       component: priceList,
     },
-    { path: "/:notFound(.*)", redirect: "/home" },
+    {
+      path: "/Login",
+      name: "Login",
+      component: Login,
+    },
+    {
+      path: "/Signup",
+      name: "signup",
+      component: signUp,
+    },
+    {
+      path: "/refund",
+      name: "refund",
+      component: refundVue,
+    },
+    {
+      path: "/aboutUs",
+      name: "aboutUs",
+      component: aboutUsVue,
+    },
+    {
+      path: "/:notFound(.*)",
+      redirect: "/home",
+    },
   ],
   scrollBehavior(_, _2, savedPosition) {
     if (savedPosition) {
