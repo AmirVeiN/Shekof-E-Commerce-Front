@@ -7,9 +7,9 @@
           <p class="text-gray">|</p>
         </div>
         <button>
-          <router-link to="/" class="w-48 h-full items-center flex justify-end">
+          <RouterLink to="/" class="w-48 h-full items-center flex justify-end">
             <img src="/Logo-Shekaf.png" alt="Loading.." />
-          </router-link>
+          </RouterLink>
         </button>
       </div>
       <div class="flex flex-row-reverse h-full items-center">
@@ -24,9 +24,9 @@
           <button class="text-gray font-semibold text-sm hover:text-blue">
             درباره ما
           </button>
-          <button class="text-gray font-semibold text-sm hover:text-blue">
+          <RouterLink :to="{ path: '/contactUs' }" class="text-gray font-semibold text-sm hover:text-blue">
             تماس باما
-          </button>
+          </RouterLink>
           <button class="text-gray font-semibold text-sm hover:text-blue">
             مجله
           </button>

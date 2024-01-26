@@ -21,15 +21,10 @@ const router = createRouter({
       name: "home",
       component: homeVue,
     },
-    {
-      path: "/rules",
-      name: "rules",
-      component: rules,
-    },
-    {
-      path: "/contactUs",
-      name: "contactUs",
-      component: contactUsVue,
+    { 
+      path: "/contactUs", 
+      name: "contactUs", 
+      component: contactUsVue 
     },
     {
       path: "/:product_slug/",
@@ -37,7 +32,7 @@ const router = createRouter({
       component: productVue,
     },
     {
-      path: "/allProduct/",
+      path: "/allProduct",
       name: "allProduct",
       component: allProductVue,
     },
