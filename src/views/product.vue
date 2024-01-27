@@ -308,26 +308,42 @@
     <p></p>
     <p></p>
   </div>
-  <div class="flex justify-center items-center h-full">
+  <div class="flex justify-center items-center h-full {{ activeCount() }}">
     <div
       class="flex flex-row-reverse w-[70%] gap-8 items-center pt-7 font-bold text-lightgray"
     >
       <button
+        @click="ChangeActive('توضیحات'), getItem()"
+        :class="
+          count === 'توضیحات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+        "
         class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
       >
         توضیحات
       </button>
       <button
+        @click="ChangeActive('مشخصات'), getItem()"
+        :class="
+          count === 'مشخصات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+        "
         class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
       >
         مشخصات کلی
       </button>
       <button
+        @click="ChangeActive('نظرات'), getItem()"
+        :class="
+          count === 'نظرات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+        "
         class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
       >
         نظرات (0)
       </button>
       <button
+        @click="ChangeActive('گارانتی'), getItem()"
+        :class="
+          count === 'گارانتی' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+        "
         class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
       >
         شرایط گارانتی
@@ -361,6 +377,8 @@ export default defineComponent({
     this.getProduct();
     this.imageUrl();
     this.colorList();
+    this.ChangeActive();
+    this.activeCount();
   },
   methods: {
     slideTo(val) {
@@ -393,6 +411,13 @@ export default defineComponent({
     counter(arg) {
       if (arg === "+") this.count++;
       else this.count >= 2 ? this.count-- : 0;
+    },
+    activeCount() {
+      this.count = "توضیحات";
+    },
+    ChangeActive(number) {
+      this.count = number;
+      console.log(this.count);
     },
   },
 });
