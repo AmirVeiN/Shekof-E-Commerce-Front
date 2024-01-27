@@ -7,26 +7,26 @@
           <p class="text-gray">|</p>
         </div>
         <button>
-          <router-link to="/" class="w-48 h-full items-center flex justify-end">
+          <RouterLink to="/" class="w-48 h-full items-center flex justify-end">
             <img src="/Logo-Shekaf.png" alt="Loading.." />
-          </router-link>
+          </RouterLink>
         </button>
       </div>
       <div class="flex flex-row-reverse h-full items-center">
         <div class="w-[450px] h-full flex flex-row-reverse justify-evenly items-center">
-          <router-link to="/allProduct/" class="text-gray font-semibold text-sm hover:text-blue">فروشگاه</router-link>
-          <button class="text-gray font-semibold text-sm hover:text-blue">
+          <RouterLink to="/allProduct/" class="text-gray font-semibold text-sm hover:text-blue">فروشگاه</RouterLink>
+          <RouterLink to="/rules/" class="text-gray font-semibold text-sm hover:text-blue">
             قوانین
-          </button>
-          <button class="text-gray font-semibold text-sm hover:text-blue">
+          </RouterLink>
+          <RouterLink to="/refund/" class="text-gray font-semibold text-sm hover:text-blue">
             مرجوعی
-          </button>
-          <button class="text-gray font-semibold text-sm hover:text-blue">
+          </RouterLink>
+          <RouterLink to="/aboutUs/" class="text-gray font-semibold text-sm hover:text-blue">
             درباره ما
-          </button>
-          <button class="text-gray font-semibold text-sm hover:text-blue">
+          </RouterLink>
+          <RouterLink :to="{ path: '/contactUs' }" class="text-gray font-semibold text-sm hover:text-blue">
             تماس باما
-          </button>
+          </RouterLink>
           <button class="text-gray font-semibold text-sm hover:text-blue">
             مجله
           </button>
@@ -213,9 +213,9 @@
         </div>
         <div class="w-[1%] text-gray/50">|</div>
         <div class="bg-blue/15 w-[48%] h-full flex flex-row items-center rounded-full justify-between">
-          <router-link  class="bg-blue p-3 px-4 rounded-l-full" :to="{ path: '/allProduct/', query: { search: search } }" >
+          <RouterLink class="bg-blue p-3 px-4 rounded-l-full" :to="{ path: '/allProduct/', query: { search: search } }" >
             <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="text-white text-xl" />
-          </router-link>
+          </RouterLink>
           <input class="bg-transparent w-full h-full font-semibold flex text-right p-2 pr-3 focus:outline-none"
             type="text" placeholder="جستجوی محصولات" id="search" value="search" v-model="search" />
         </div>
@@ -249,9 +249,9 @@
         </div>
         <button
           class="flex w-40 flex-row items-center justify-center space-x-1 border-gray/70 hover:border-black border-2 rounded-2xl h-full py-2">
-          <div>
+          <RouterLink to="/Signup/">
             <p class="text-gray hover:text-black">ورود / ثبت نام</p>
-          </div>
+          </RouterLink>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="18" viewBox="0 0 448 512">
               !Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com

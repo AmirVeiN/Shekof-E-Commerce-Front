@@ -8,7 +8,8 @@ import Login from "../views/Login.vue";
 import signUp from "../views/signUp.vue";
 import refundVue from "@/views/refund.vue";
 import aboutUsVue from "@/views/aboutUs.vue";
-import rules from "@/views/rules.vue";
+import rulesVue from "@/views/rules.vue";
+import checkoutVue from "@/views/checkout.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -17,19 +18,19 @@ const router = createRouter({
       redirect: "/home",
     },
     {
+      path: "/checkout",
+      name: "checkoutVue",
+      component: checkoutVue,
+    },
+    {
       path: "/home",
       name: "home",
       component: homeVue,
     },
-    {
-      path: "/rules",
-      name: "rules",
-      component: rules,
-    },
-    {
-      path: "/contactUs",
-      name: "contactUs",
-      component: contactUsVue,
+    { 
+      path: "/contactUs", 
+      name: "contactUs", 
+      component: contactUsVue 
     },
     {
       path: "/:product_slug/",
@@ -37,7 +38,7 @@ const router = createRouter({
       component: productVue,
     },
     {
-      path: "/allProduct/",
+      path: "/allProduct",
       name: "allProduct",
       component: allProductVue,
     },
@@ -60,6 +61,11 @@ const router = createRouter({
       path: "/refund",
       name: "refund",
       component: refundVue,
+    },
+    {
+      path: "/rules",
+      name: "rules",
+      component: rulesVue,
     },
     {
       path: "/aboutUs",
