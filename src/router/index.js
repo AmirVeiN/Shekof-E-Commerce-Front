@@ -8,7 +8,7 @@ import Login from "../views/Login.vue";
 import signUp from "../views/signUp.vue";
 import refundVue from "@/views/refund.vue";
 import aboutUsVue from "@/views/aboutUs.vue";
-import rules from "@/views/rules.vue";
+import rulesVue from "@/views/rules.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -55,6 +55,11 @@ const router = createRouter({
       path: "/refund",
       name: "refund",
       component: refundVue,
+    },
+    {
+      path: "/rules",
+      name: "rules",
+      component: rulesVue,
     },
     {
       path: "/aboutUs",
