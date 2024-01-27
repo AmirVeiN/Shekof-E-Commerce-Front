@@ -172,12 +172,12 @@
               placeholder=" نام خانوادگی"
             />
           </div>
-          <div class="flex flex-col px-4 mb-5">
+          <div class="flex flex-col px-4 mb-5 ss02">
             <label class="text-sm text-ultrablack mb-2" for="phonenumber">
               شماره تلفن
             </label>
             <input
-              class="outline-none cursor-pointer block border-2 rounded-3xl w-full px-4 py-2 text-sm border-lightergray text-ultragray"
+              class="outline-none  cursor-pointer block border-2 rounded-3xl w-full px-4 py-2 text-sm border-lightergray text-ultragray"
               type="number"
               id="phonenumber"
               placeholder="09123456789"
