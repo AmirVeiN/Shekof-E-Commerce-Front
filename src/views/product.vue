@@ -315,36 +315,44 @@
       <button
         @click="ChangeActive('توضیحات'), getItem()"
         :class="
-          count === 'توضیحات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+          countdesc === 'توضیحات'
+            ? 'text-blue border-b-2 border-blue'
+            : 'text-gray'
         "
-        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
+        class="text-lg transition duration-300 ease-in-out cursor-pointer"
       >
         توضیحات
       </button>
       <button
         @click="ChangeActive('مشخصات'), getItem()"
         :class="
-          count === 'مشخصات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+          countdesc === 'مشخصات'
+            ? 'text-blue border-b-2 border-blue'
+            : 'text-gray'
         "
-        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
+        class="text-lg transition duration-300 ease-in-out cursor-pointer"
       >
         مشخصات کلی
       </button>
       <button
         @click="ChangeActive('نظرات'), getItem()"
         :class="
-          count === 'نظرات' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+          countdesc === 'نظرات'
+            ? 'text-blue border-b-2 border-blue'
+            : 'text-gray'
         "
-        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
+        class="text-lg transition duration-300 ease-in-out cursor-pointer"
       >
         نظرات (0)
       </button>
       <button
         @click="ChangeActive('گارانتی'), getItem()"
         :class="
-          count === 'گارانتی' ? 'text-blue border-b-2 border-blue' : 'text-gray'
+          countdesc === 'گارانتی'
+            ? 'text-blue border-b-2 border-blue'
+            : 'text-gray'
         "
-        class="text-lg transition duration-300 ease-in-out cursor-pointer hover:text-midgray"
+        class="text-lg transition duration-300 ease-in-out cursor-pointer"
       >
         شرایط گارانتی
       </button>
@@ -372,6 +380,7 @@ export default defineComponent({
     currentSlide: 0,
     product: [],
     count: 1,
+    countdesc: 1,
   }),
   mounted() {
     this.getProduct();
@@ -413,11 +422,11 @@ export default defineComponent({
       else this.count >= 2 ? this.count-- : 0;
     },
     activeCount() {
-      this.count = "توضیحات";
+      this.countdesc = "توضیحات";
     },
     ChangeActive(number) {
-      this.count = number;
-      console.log(this.count);
+      this.countdesc = number;
+      console.log(this.countdesc);
     },
   },
 });
