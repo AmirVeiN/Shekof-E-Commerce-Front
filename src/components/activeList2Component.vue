@@ -2,16 +2,16 @@
   <div class="w-full flex justify-center items-center mt-12">
     <div class="flex flex-col space-y-6 w-[68%] min-w-[1000px]">
       <div class="flex flex-row-reverse justify-between items-center">
-        <div class="text-2xl font-extrabold text-blue {{ activeCount() }}">
+        <div class="text-lg font-bold text-blue pr-2 {{ activeCount() }}">
           برترین های شکاف
         </div>
-        <div class="flex flex-row space-x-6 text-xl font-bold h-12">
+        <div class="flex flex-row space-x-6 text-xl font-bold h-8 pl-12">
           <button
             @click="ChangeActive('new'), getItem()"
             :class="
               count === 'new' ? 'text-blue border-b-2 border-blue' : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             جدید ترین ها
           </button>
@@ -22,7 +22,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             پر تخفیف ترین ها
           </button>
@@ -33,7 +33,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             پر فروش ترین ها
           </button>
