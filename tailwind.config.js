@@ -63,6 +63,7 @@ export default {
       purewhite: "#fff",
       lighterwhiter: "#F9FAFB",
       textgray: "#777",
+      textred: "#ff0000",
     },
     extend: {},
   },

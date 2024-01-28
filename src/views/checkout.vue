@@ -1,4 +1,5 @@
 <template>
+  <headerComponent />
   <div class="flex justify-center">
     <div class="w-[70%]" dir="rtl">
       <div>
@@ -198,10 +199,14 @@
           <div>
             <p class="text-xl text-center font-semibold mb-5">سفارش شما</p>
           </div>
-          <div class="flex flex-col bg-purewhite py-4 px-2.5">
+          <div class="flex flex-col bg-purewhite py-4 px-2.5 mb-5">
             <div class="flex justify-between">
               <p class="px-2.5 py-4">محصول</p>
               <p class="px-2.5 py-4">جمع جزء</p>
+            </div>
+            <div class="divide-y-2 divide-lightergray px-1 w-full">
+              <p></p>
+              <p></p>
             </div>
             <div class="flex justify-between">
               <p class="px-2.5 py-4 w-[70%]">
@@ -210,17 +215,29 @@
               </p>
               <p class="px-2.5 py-4">68,086,000 تومان</p>
             </div>
+            <div class="divide-y-[1px] divide-lightergray px-1 w-full">
+              <p></p>
+              <p></p>
+            </div>
             <div class="flex justify-between">
               <p class="px-2.5 py-4">جمع جزء</p>
               <p class="px-2.5 py-4">68,086,000 تومان</p>
+            </div>
+            <div class="divide-y-[1px] divide-lightergray px-1 w-full">
+              <p></p>
+              <p></p>
             </div>
             <div class="flex items-center">
               <p class="px-2.5 py-4">حمل و نقل</p>
               <div class="flex flex-col w-[80%]">
                 <div class="flex w-full justify-between">
                   <div class="flex text-sm">
-                    <label class="cursor-pointer" for="shiping">تحویل درب منزل:</label>
-                    <span class=" font-semibold text-lightBlue">129,000 تومان</span>
+                    <label class="cursor-pointer prevent-select" for="shiping"
+                      >تحویل درب منزل:</label
+                    >
+                    <span class="font-semibold text-lightBlue"
+                      >129,000 تومان</span
+                    >
                   </div>
                   <div class="flex">
                     <input
@@ -232,9 +249,16 @@
                   </div>
                 </div>
                 <div class="flex w-full justify-between">
-                  <div class="flex  text-sm">
-                    <label class="cursor-pointer" for="shipingsnap"> تحویل درب انبار:</label>
-                    <span class=" font-semibold text-lightBlue">15,000 تومان</span>
+                  <div class="flex text-sm">
+                    <label
+                      class="cursor-pointer prevent-select"
+                      for="shipingsnap"
+                    >
+                      تحویل درب انبار:</label
+                    >
+                    <span class="font-semibold text-lightBlue"
+                      >15,000 تومان</span
+                    >
                   </div>
                   <div class="flex">
                     <input
@@ -247,15 +271,139 @@
                 </div>
               </div>
             </div>
+            <div class="divide-y-[1px] divide-lightergray px-1 w-full">
+              <p></p>
+              <p></p>
+            </div>
             <div class="flex justify-between">
               <p class="px-2.5 py-4">مجموع</p>
               <p class="px-2.5 py-4">68,215,000 تومان</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center mt-5">
+            <div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  id="paymentmethodcard"
+                  :value="'cart'"
+                  v-model="payment"
+                />
+                <label
+                  class="cursor-pointer pr-2 prevent-select"
+                  for="paymentmethodcard"
+                >
+                  کارت به کارت
+                </label>
+              </div>
+              <div v-if="payment === 'cart'">
+                <div
+                  class="flex text-sm flex-col rounded-xl text-textgray p-4 mt-4 bg-purewhite"
+                >
+                  <div class="mb-2.5 space-y-1">
+                    <strong>
+                      این روش خرید شامل مبالغ خرید بالای 10 میلیون تومان نمی
+                      باشد.
+                    </strong>
+                    <p>
+                      در صورت تسویه بصورت کارت به کارت/بانکی از طریق شماره حساب
+                      زیر اقدام گردد.
+                    </p>
+                    <p>شماره حساب نزد پست بانک: 1000152326616</p>
+                    <p>شماره کارت پست بانک: 6277601255598441</p>
+                    <p>بنام آقای امین کیانی</p>
+                  </div>
+                  <strong class="w-[30rem]">
+                    بعد از پرداخت کارت به کارت رسید پرداخت را از طریق شبکه های
+                    اجتماعی به شماره 09366681202 ارسال نمایید یا با یکی از شماره
+                    های ما تماس حاصل فرمایید.
+                  </strong>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <div class="flex">
+                <input
+                  type="radio"
+                  id="paymentotc"
+                  v-model="payment"
+                  :value="'otc'"
+                />
+                <label
+                  class="cursor-pointer pr-2 prevent-select"
+                  for="paymentotc"
+                >
+                  پرداخت در محل(فقط شهر تهران)
+                </label>
+              </div>
+              <div v-if="payment === 'otc'">
+                <div
+                  class="flex text-sm flex-col rounded-xl text-textgray p-4 mt-4 bg-purewhite"
+                >
+                  <div class="mb-2.5 space-y-2">
+                    <p class="text-center font-normal text-black">
+                      پرداخت توسط کارت بانکی پس از تحویل کالا در محل.
+                    </p>
+                    <p>
+                      (جهت قطعی شدن خریدتان، مبلغ یک میلیون تومان بیعانه به حساب
+                      زیر واریز کرده و یا از طریق لینک زیر بصورت آنلاین بیعانه
+                      را پرداخت نمایید.)
+                    </p>
+                    <p>
+                      شماره کارت پست بانک:
+                      <strong>6277601255598441</strong> بنام آقای
+                      <strong>امین کیانی</strong>
+                    </p>
+                  </div>
+                  <button
+                    type="submit"
+                    class="text-center text-base text-lightBlue cursor-pointer font-bold bg-submitgray w-44 py-3"
+                  >
+                    پرداخت آنلاین بیعانه
+                  </button>
+                  <p class="text-textred mt-4">
+                    ***اعتبار سفارش شما برای پرداخت در محل به مدت 30 دقیقه می
+                    باشد. در غیر این صورت سفارش شما لغو خواهد گردید.***
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="divide-y-[1px] mt-5 divide-lightergray px-1 w-full">
+              <p></p>
+              <p></p>
+            </div>
+            <div>
+              <div class="flex text-sm items-center prevent-select mt-5">
+                <input
+                  class="w-5"
+                  type="checkbox"
+                  id="news"
+                  checked
+                  value="1"
+                />
+                <label class="cursor-pointer pr-2" for="news"
+                  >من
+                  <a
+                    href="#"
+                    class="text-lightBlue font-semibold hover:underline"
+                    >شرایط و مقررات</a
+                  >
+                  سایت را خوانده ام و آن را می پذیرم.</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="text-center mt-8 text-base rounded-md bg-lightBlue cursor-pointer text-purewhite font-bold w-full py-3"
+              >
+              ثبت سفارش
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <footerCmponent />
 </template>
 
 <script>
@@ -263,5 +411,19 @@ export default {
   setup() {
     return {};
   },
+  data() {
+    return {
+      payment: "",
+    };
+  },
+  methods: {
+    methodclick() {
+      this.paymentotc ? (this.paymentotc = false) : (this.paymentotc = true);
+    },
+  },
 };
+</script>
+<script setup>
+import headerComponent from "@/components/headerComponent.vue";
+import footerCmponent from "@/components/footerCmponent.vue";
 </script>
