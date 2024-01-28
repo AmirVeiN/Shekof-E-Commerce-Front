@@ -16,6 +16,7 @@ import {
   faCheck,
   faAngleLeft,
   faSquareCheck,
+  faInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -55,7 +56,8 @@ library.add(
   faAngleLeft,
   faSquareCheck,
   faLinkedinIn,
-  faFacebookF
+  faFacebookF,
+  faInfo
 );
 
 const app = createApp(App);

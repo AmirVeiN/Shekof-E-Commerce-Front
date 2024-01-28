@@ -9,12 +9,18 @@ import signUp from "../views/signUp.vue";
 import refundVue from "@/views/refund.vue";
 import aboutUsVue from "@/views/aboutUs.vue";
 import rulesVue from "@/views/rules.vue";
+import checkoutVue from "@/views/checkout.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
       redirect: "/home",
+    },
+    {
+      path: "/checkout",
+      name: "checkoutVue",
+      component: checkoutVue,
     },
     {
       path: "/home",

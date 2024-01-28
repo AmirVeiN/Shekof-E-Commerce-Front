@@ -59,6 +59,7 @@ export default {
       ultrablue: "#4054B2",
       ultrablack: "#242424",
       submitgray: "#f3f3f3",
+      backgroundgray: "#f7f7f7",
       purewhite: "#fff",
       lighterwhiter: "#F9FAFB",
       textgray: "#777",
