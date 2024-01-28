@@ -1,12 +1,10 @@
-<script >
-
-import axios from 'axios'
-import { defineComponent } from 'vue'
-import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+<script>
+import axios from "axios";
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
-
   data() {
     return {
       settings: {
@@ -19,17 +17,24 @@ export default defineComponent({
           snapAlign: "center",
         },
         1024: {
+          itemsToShow: 4,
+          snapAlign: "start",
+        },
+        1600: {
+          itemsToShow: 4.5,
+          snapAlign: "start",
+        },
+        1824: {
           itemsToShow: 5,
           snapAlign: "start",
         },
       },
-      latestProducts: []
-    }
-
+      latestProducts: [],
+    };
   },
 
   mounted() {
-    this.getLatestProducts()
+    this.getLatestProducts();
   },
   components: {
     Carousel,
@@ -39,19 +44,18 @@ export default defineComponent({
   },
   methods: {
     async getLatestProducts() {
-
-      await axios.get('/api/v1/latest-product/').then(response => {
-        console.log(response.data);
-        this.latestProducts = response.data
-      })
-        .catch(error => {
-          console.log(error)
+      await axios
+        .get("/api/v1/latest-product/")
+        .then((response) => {
+          console.log(response.data);
+          this.latestProducts = response.data;
         })
-
-    }
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
-
-})
+});
 </script>
 
 <script setup>
@@ -59,12 +63,25 @@ import SliderComponent from "./sliderComponent.vue";
 </script>
 
 <template>
-  <div class="flex  justify-center items-center flex-col space-y-10">
-    <div class="w-[68%]  min-w-[1000px]">
-      <carousel class="" v-bind="settings" :breakpoints="breakpoints" :autoplay="2000" :wrap-around="true">
+  <div class="flex justify-center items-center flex-col space-y-10">
+    <div class="w-[68%] min-w-[1000px]">
+      <carousel
+        class=""
+        v-bind="settings"
+        :breakpoints="breakpoints"
+        :autoplay="2000"
+        :wrap-around="true"
+      >
         <slide v-for="slide in latestProducts" :key="slide">
-          <SliderComponent :title="slide.Name" :slug="slide.Slug" :likes="slide.Star" :price="slide.Price" :color="slide.InStockColor"
-            :stock="slide.InStock" :srcImg="slide.Image" />
+          <SliderComponent
+            :title="slide.Name"
+            :slug="slide.Slug"
+            :likes="slide.Star"
+            :price="slide.Price"
+            :color="slide.InStockColor"
+            :stock="slide.InStock"
+            :srcImg="slide.Image"
+          />
         </slide>
         <template #addons>
           <Pagination />
@@ -73,7 +90,7 @@ import SliderComponent from "./sliderComponent.vue";
       </carousel>
     </div>
     <div>
-      <img src="/Shekaf-Slider-9.png" alt="">
+      <img src="/Shekaf-Slider-9.png" alt="" />
     </div>
   </div>
 </template>

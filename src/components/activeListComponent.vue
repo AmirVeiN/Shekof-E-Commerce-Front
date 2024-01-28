@@ -2,10 +2,10 @@
   <div class="w-full flex justify-center items-center mt-12">
     <div class="flex flex-col space-y-6 w-[68%] min-w-[1000px]">
       <div class="flex flex-row-reverse justify-between items-center">
-        <div class="text-2xl font-extrabold text-blue {{ activeCount() }}">
+        <div class="text-lg font-bold text-blue pr-2 {{ activeCount() }}">
           محصولات شکاف
         </div>
-        <div class="flex flex-row space-x-6 text-xl font-bold h-12">
+        <div class="flex flex-row space-x-6 text-xl font-bold h-8 pl-12">
           <button
             @click="ChangeActive('Nokia'), getItem()"
             :class="
@@ -13,7 +13,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             نوکیا
           </button>
@@ -24,7 +24,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             آنر
           </button>
@@ -35,7 +35,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             هوآوی
           </button>
@@ -46,7 +46,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             شیائومی
           </button>
@@ -57,7 +57,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             سامسونگ
           </button>
@@ -68,7 +68,7 @@
                 ? 'text-blue border-b-2 border-blue'
                 : 'text-gray'
             "
-            class="text-xl hover:border-b-2 border-blue"
+            class="text-sm hover:border-b-2 border-blue"
           >
             آیفون
           </button>
