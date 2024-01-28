@@ -284,6 +284,8 @@ export default {
 },
   mounted() {
 
+    const auth = this.$store.isAuthenticated
+    console.log(this.$store.isAuthenticated);
   },
   methods: {
   },

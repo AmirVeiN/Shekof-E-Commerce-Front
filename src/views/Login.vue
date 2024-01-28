@@ -12,7 +12,7 @@
           >
             خوش آمدید
           </h1>
-          <form class="space-y-4 md:space-y-6" action="#">
+          <form class="space-y-4 md:space-y-6" @submit.prevent="submitForm">
             <div dir="rtl" class="text-right">
               <label
                 for="phoneNumber"
@@ -21,9 +21,10 @@
                 شماره تماس</label
               >
               <input
-                type="number"
-                name="phoneNumber"
-                id="phoneNumber"
+                type="tel"
+                name="phone"
+                id="phone"
+                v-model="phone"
                 class="bg-lighterwhiter border focus:ring-1 border-lightgray text-ultrablack sm:text-sm rounded-lg focus:ring-primary-600 outline-none focus:border-primary-600 block w-full p-2.5"
                 placeholder="09123456789"
                 required
@@ -39,6 +40,7 @@
                 type="password"
                 name="password"
                 id="password"
+                v-model="password"
                 placeholder="••••••••"
                 class="bg-lighterwhiter border focus:ring-1 border-lightgray text-ultrablack sm:text-sm rounded-lg focus:ring-primary-600 outline-none focus:border-primary-600 block w-full p-2.5"
                 required=""
@@ -52,7 +54,6 @@
                     aria-describedby="remember"
                     type="checkbox"
                     class="w-4 h-4 border border-gray-300 rounded bg-lightWhite focus:ring-3 outline-none focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                    required
                   />
                 </div>
                 <div class="mr-3 text-sm">
@@ -77,11 +78,11 @@
             </button>
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
               هنوز حساب کاربری ندارید؟
-              <a
+              <RouterLink
+                to="/signup/"
                 href="#"
                 class="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >ثبت نام</a
-              >
+                >ثبت نام</RouterLink>
             </p>
           </form>
         </div>
@@ -90,4 +91,59 @@
   </section>
 </template>
 
-<script></script>
+<script>
+import axios from 'axios'
+
+export default {
+    name: 'LogIn',
+    data() {
+        return {
+            phone: '',
+            password: '',
+            errors: []
+        }
+    },
+    mounted() {
+        document.title = 'LogIn | شکاف'
+    },
+    methods: {
+        async submitForm() {
+            axios.defaults.headers.common["Authorization"] = ""
+
+            localStorage.removeItem("token")
+
+            const formData = {
+                phone: this.phone,
+                password: this.password
+            }
+
+            await axios
+                .post("/api/v1/token/login/", formData)
+                .then(response => {
+                    const token = response.data.auth_token
+
+                    this.$store.commit('setToken', token)
+                    
+                    axios.defaults.headers.common["Authorization"] = "Token " + token
+
+                    localStorage.setItem("token", token)
+
+                    const toPath = this.$route.query.to || '/home'
+
+                    this.$router.push(toPath)
+                })
+                .catch(error => {
+                    if (error.response) {
+                        for (const property in error.response.data) {
+                            this.errors.push(`${property}: ${error.response.data[property]}`)
+                        }
+                    } else {
+                        this.errors.push('Something went wrong. Please try again')
+                        
+                        console.log(JSON.stringify(error))
+                    }
+                })
+        }
+    }
+}
+</script>
