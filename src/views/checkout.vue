@@ -2,7 +2,7 @@
   <headerComponent />
   <div class="flex justify-center">
     <div class="w-[70%]" dir="rtl">
-      <div>
+      <div class="my-8">
         <font-awesome-icon icon="fa-solid fa-info" />
         <span class="pr-2 text-sm font-semibold">قبلا ثبت نام کرده‌اید؟</span>
         <a class="text-ultrablue hover:underline text-sm font-semibold" href="#"
@@ -36,41 +36,44 @@
               </div>
             </div>
             <div class="mt-2">
-              <label class="text-sm text-ultrablack" for="lastname">
+              <label class="text-sm text-ultrablack" for="Cmpanyname">
                 نام شرکت (اختیاری)
               </label>
               <input
                 class="outline-none border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="text"
-                id="lastname"
+                id="Cmpanyname"
                 placeholder=""
               />
             </div>
             <div class="mt-2">
-              <label class="text-sm text-ultrablack" for="lastname">
+              <label class="text-sm text-ultrablack" for="Addres">
                 آدرس خیابان
               </label>
               <input
                 class="outline-none border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="text"
-                id="lastname"
+                id="Addres"
                 placeholder="نام خیابان و پلاک خانه"
               />
               <input
                 class="outline-none border-2 rounded-3xl w-full mt-4 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="text"
-                id="lastname"
+                id="Addres"
                 placeholder="آپارتمان، مجتمع، واحد و... (اختیاری)"
               />
             </div>
             <div class="mt-2">
-              <label class="text-sm text-ultrablack" for="lastname">
-                نام شرکت (اختیاری)
+              <label
+                class="text-sm text-ultrablack"
+                for="Postalcode"
+              >
+                کد پستی
               </label>
               <input
                 class="outline-none border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="text"
-                id="lastname"
+                id="Postalcode"
                 placeholder=""
               />
             </div>
@@ -80,7 +83,7 @@
               </label>
               <select
                 name="Waranti"
-                id="waranti"
+                id="city"
                 class="checkoutselect mt-2 cursor-pointer block outline-none border-2 rounded-3xl w-full p-2 text-sm border-lightergray text-ultragray"
               >
                 <option value="" disabled selected hidden>
@@ -125,7 +128,7 @@
               </label>
               <select
                 name="Waranti"
-                id="waranti"
+                id="city"
                 class="checkoutselect mt-2 cursor-pointer block outline-none border-2 rounded-3xl w-full p-2 text-sm border-lightergray text-ultragray"
               >
                 <option value="" disabled selected hidden>
@@ -147,35 +150,33 @@
               </select>
             </div>
             <div class="mt-2">
-              <label class="text-sm text-ultrablack mb-2" for="phonenumber">
+              <label class="text-sm text-ultrablack mb-2" for="phone">
                 شماره تلفن
               </label>
               <input
                 class="outline-none cursor-pointer block border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="number"
-                id="phonenumber"
+                id="phone"
                 placeholder="09123456789"
               />
             </div>
             <div class="mt-2">
-              <label class="text-sm text-ultrablack" for="lastname">
-                ایمیل
-              </label>
+              <label class="text-sm text-ultrablack" for="email"> ایمیل </label>
               <input
                 class="outline-none border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
-                type="text"
-                id="lastname"
+                type="email"
+                id="email"
                 placeholder="example@gmail.com"
               />
             </div>
             <div class="mt-2 mb-5">
-              <label class="text-sm text-ultrablack mb-2" for="phonenumber">
+              <label class="text-sm text-ultrablack mb-2" for="nationalcode">
                 کد ملی مشتری
               </label>
               <input
                 class="outline-none cursor-pointer block border-2 rounded-3xl w-full mt-2 px-4 py-2 text-sm border-lightergray text-ultragray"
                 type="number"
-                id="phonenumber"
+                id="nationalcode"
                 placeholder=""
               />
             </div>
@@ -195,11 +196,11 @@
             </div>
           </div>
         </div>
-        <div class="bg-backgroundgray w-[50%] p-8">
+        <div class="bg-backgroundgray rounded-lg w-[50%] p-8">
           <div>
             <p class="text-xl text-center font-semibold mb-5">سفارش شما</p>
           </div>
-          <div class="flex flex-col bg-purewhite py-4 px-2.5 mb-5">
+          <div class="flex flex-col bg-purewhite rounded-lg py-4 px-2.5 mb-5">
             <div class="flex justify-between">
               <p class="px-2.5 py-4">محصول</p>
               <p class="px-2.5 py-4">جمع جزء</p>
@@ -395,7 +396,7 @@
                 type="submit"
                 class="text-center mt-8 text-base rounded-md bg-lightBlue cursor-pointer text-purewhite font-bold w-full py-3"
               >
-              ثبت سفارش
+                ثبت سفارش
               </button>
             </div>
           </div>
