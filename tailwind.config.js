@@ -64,6 +64,7 @@ export default {
       lighterwhiter: "#F9FAFB",
       textgray: "#777",
       textred: "#ff0000",
+      textlightblue:'#2196f3'
     },
     extend: {},
   },
