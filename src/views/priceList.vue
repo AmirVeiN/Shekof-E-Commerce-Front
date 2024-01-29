@@ -11,7 +11,7 @@
                     <p>قیمت</p>
                 </div>
             </div>
-            <div class="flex flex-row-reverse justify-between items-center w-full pt-2" v-for="item in items">
+            <div class="flex flex-row-reverse justify-between items-center w-full pt-2" v-for="item in items" :key="item">
                 <div class="flex flex-row space-x-4 w-[70%] justify-end font-semibold text-sm text-blue items-center">
                     <RouterLink :to="'/'+ item.Slug">{{ item.Name }}</RouterLink>
                     <img :src="'/product/' + imageUrl(item.Image)" alt="" width="70" height="70" />
