@@ -1028,11 +1028,137 @@
     <div
       class="w-[70%] h-full text-right text-lg text-black"
       v-if="countdesc === 'نظرات'"
-    ></div>
+    >
+      <div dir="rtl" class="flex w-full h-full">
+        <div class="w-[50%]">
+          <h3 class="text-sm font-semibold text-black">نقد و بررسی‌ها</h3>
+          <p class="text-sm font-normal mt-8 text-textgray">
+            هنوز بررسی‌ای ثبت نشده است.
+          </p>
+        </div>
+        <div class="w-[50%] space-y-4">
+          <h4 class="text-sm font-semibold text-black">
+            اولین کسی باشید که دیدگاهی می نویسد "{{ product.Name }}"
+          </h4>
+          <p class="text-sm font-normal mt-8 text-textgray">
+            نشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز علامت‌گذاری
+            شده‌اند
+          </p>
+          <div class="flex space-y-2 items-center mt-4">
+            <p class="text-sm font-normal text-black pl-4">امتیاز شما:</p>
+            <star-rating
+              v-bind:show-rating="false"
+              v-bind:increment="1"
+              v-bind:rating="likes"
+              v-bind:max-rating="5"
+              v-bind:border-width="1"
+              inactive-color="#fff"
+              border-color="#999"
+              v-bind:star-size="15"
+            />
+          </div>
+          <div>
+            <label
+              class="text-sm font-normal text-ultrablack mb-2"
+              for="Description"
+              >نظر شما
+            </label>
+            <textarea
+              class="mt-2 outline-none block border-2 rounded-3xl w-full px-4 py-2 text-sm resize-none border-lightergray text-ultragray"
+              type="text"
+              id="Description"
+              rows="10"
+              cols="40"
+              aria-invalid="false"
+              placeholder="پیام شما"
+            />
+          </div>
+          <div>
+            <label class="text-sm mb-2 font-normal" for="name">نام</label>
+            <input
+              class="mt-2 outline-none cursor-pointer block border-2 rounded-3xl w-full px-4 py-2 text-sm border-lightergray text-ultragray"
+              type="text"
+              id="name"
+              placeholder="نام"
+            />
+          </div>
+          <div>
+            <label class="text-sm font-normal text-ultrablack mb-2" for="email"
+              >ایمیل شما
+            </label>
+            <input
+              class="mt-2 outline-none block border-2 rounded-3xl w-full px-4 py-2 text-sm border-lightergray text-ultragray"
+              type="text"
+              id="email"
+              placeholder="ایمیل"
+            />
+          </div>
+          <button
+            @click="$store.commit('increaseCartCounter')"
+            class="px-6 py-3 bg-lightBlue font-semibold rounded-lg text-white"
+          >
+            ثبت
+          </button>
+        </div>
+      </div>
+    </div>
     <div
       class="w-[70%] h-full text-right text-lg text-black"
       v-if="countdesc === 'گارانتی'"
-    ></div>
+    >
+      <div class="w-full">
+        <h2 class="text-2xl text-ultrablue mb-5 font-medium">
+          شرایط ضمانت هفت روزه شکاف
+        </h2>
+        <h5 class="mb-6 text-gray text-sm font-normal">خرید و اعتماد حسی که تجربه و می کنید و از آن لذت خواهید برد.</h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          با خرید از مجموعه شکاف، فقط قیمت‌های درج شده بر روی سایت را پرداخت
+          می‌کنید و هیچ هزینه اضافه اعم از مالیات و ... را پرداخت نخواهید کرد.
+          همچنین ملزم به خرید هیچگونه لوازم جانبی و نرم‌افزار در کنار محصول
+          نخواهید بود و قیمت سایت (برای همه محصولات)، قیمت نهایی می‌باشد. البته
+          ممکن است با توجه به محل خریدار، هزینه‌ی حمل ونقل به مبلغ خرید شما
+          افزوده شود که در هنگام ثبت سفارش به شما نمایش داده خواهد شد.
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          ضمانت برگشت 100 % پول پرداختی توسط شما و پس گرفتن محصول تا 7 روز پس از
+          خرید (7 روز از زمان رسیدن محصول به دست خریدار) با توجه به شرایط زیر
+          امکان پذیر است:
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -مشخصات ذکر شده برای هر محصول در سایت شکاف با مشخصات واقعی آن همخوانی
+          نداشته باشد. (عودت بدون هرگونه شرایط و کسر هر نوع مبلغ)
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -در صورت ادعای شکاف به اصل و اورجینال بودن محصول، محصول اصل نباشد.
+          (عودت بدون هرگونه شرایط و کسر هر نوع مبلغ)
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -در صورت داشتن گارانتی، ضمانت‌نامه محصول معتبر نباشد و یا تقلبی باشد.
+          (عودت بدون هرگونه شرایط و کسر هر نوع مبلغ)
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -کالای خریداری شده از مجموعه شکاف، نو نبوده و یا ایرادی داشته باشد
+          (علیرغم آکبند بودن) یا متعلقات آن، کم و کاستی داشته باشد که ماهیت پک
+          محصول نباشد. (عودت بدون کسر هر نوع مبلغ – منوط به شرایط ذیل:)
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          اجناس دارای گارانتی که آکبند بوده و یا دارای پلمب شرکتی هستند قاعدتا
+          مجموعه شکاف دخل و تصرفی در آنها نداشته، می‌بایست برای شرکت گارانتی
+          کننده ارسال شوند و شرکت گارانتی کننده، پاسخگو می باشد.
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -برخی کالاها به دلیل شرایط خاصی که دارند (مثل ثبت به نام خریدار در
+          شرکت‌های مادر و یا ثبت در سیستم‌ها و سایت‌های شرکت‌های تولیدکننده به
+          نام خریدار) و امکان عودت حتی در صورت آکبند بودن و استفاده نشدن را
+          ندارند.
+        </h5>
+        <h5 class="mb-6 text-gray text-sm font-normal">
+          -امکان عودت وجه تنها به حسابی که از آن حساب کالا خریداری شده است وجود
+          دارد و شکاف از واریز وجه به حساب شخص دیگر یا شماره حساب دیگر معذور
+          است.
+        </h5>
+      </div>
+    </div>
   </div>
 
   <footerCmponent />
