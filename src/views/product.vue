@@ -9,12 +9,6 @@
           :wrap-around="false"
           v-model="currentSlide"
         >
-        <Carousel
-          id="gallery"
-          :items-to-show="1"
-          :wrap-around="false"
-          v-model="currentSlide"
-        >
           <Slide v-for="slide in imageUrl()" :key="slide">
             <div
               class="carousel__item relative max-w-xs overflow-hidden bg-cover bg-no-repeat"
