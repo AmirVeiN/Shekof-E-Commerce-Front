@@ -80,7 +80,6 @@
               هنوز حساب کاربری ندارید؟
               <RouterLink
                 to="/signup/"
-                href="#"
                 class="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >ثبت نام</RouterLink>
             </p>

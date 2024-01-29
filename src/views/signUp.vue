@@ -55,7 +55,8 @@
             </button>
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
               آیا حساب کاربری دارید؟
-              <RouterLink to="/login/" class="font-medium text-primary-600 hover:underline dark:text-primary-500">وارد شوید</RouterLink>
+              <RouterLink to="/login/" class="font-medium text-primary-600 hover:underline dark:text-primary-500">وارد
+                شوید</RouterLink>
             </p>
 
             <div class="notification is-danger" v-if="errors.length">
@@ -149,7 +150,7 @@ export default {
             }
           })
       }
-    }
+    },
   }
 }
 </script>
