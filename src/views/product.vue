@@ -36,7 +36,7 @@
         </Carousel>
       </div>
       <div
-        class="w-[70%] justify-between h-full items-end flex flex-col shadow-md rounded-lg shadow-[lightgray] px-8 pt-7 pb-4 space-y-6 text-right"
+        class="w-[70%] justify-between h-full mr-6 items-end flex flex-col shadow-md rounded-lg shadow-[lightgray] px-8 pt-7 pb-4 space-y-6 text-right"
       >
         <p class="font-bold pname text-lg">{{ product.Name }}</p>
         <div class="font-bold text-blue text-[21px] flex flex-row space-x-1">
@@ -96,62 +96,90 @@
         <div class="flex flex-col space-y-2">
           <p>رنگ ها</p>
           <div class="productColor flex flex-row space-x-2">
-            <div
-              class="w-[24px] h-[24px] bg-mobileBlack rounded-full shadow-md"
-              v-if="colorList().includes('Black')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobileOlive rounded-full shadow-md"
-              v-if="colorList().includes('Olive')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobilePurple rounded-full shadow-md"
-              v-if="colorList().includes('Purple')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobileWhite rounded-full shadow-md"
-              v-if="colorList().includes('White')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobileCream rounded-full shadow-md"
-              v-if="colorList().includes('Cream')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-gray rounded-full shadow-md"
-              v-if="colorList().includes('Gray')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-Sierrablue rounded-full shadow-md"
-              v-if="colorList().includes('Sierrablue')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobileBlue rounded-full shadow-md"
-              v-if="colorList().includes('Blue')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-mobileGreen rounded-full shadow-md"
-              v-if="colorList().includes('Green')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-Burgundy rounded-full shadow-md"
-              v-if="colorList().includes('Burgundy')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-Beige rounded-full shadow-md"
-              v-if="colorList().includes('Beige')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-brown rounded-full shadow-md"
-              v-if="colorList().includes('Brown')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-lime rounded-full shadow-md"
-              v-if="colorList().includes('Lime')"
-            ></div>
-            <div
-              class="w-[24px] h-[24px] bg-silver rounded-full shadow-md"
-              v-if="colorList().includes('Silver')"
-            ></div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileBlack rounded-full shadow-md"
+                v-if="colorList().includes('Black')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileOlive rounded-full shadow-md"
+                v-if="colorList().includes('Olive')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobilePurple rounded-full shadow-md"
+                v-if="colorList().includes('Purple')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileWhite rounded-full shadow-md"
+                v-if="colorList().includes('White')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileCream rounded-full shadow-md"
+                v-if="colorList().includes('Cream')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-gray rounded-full shadow-md"
+                v-if="colorList().includes('Gray')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-Sierrablue rounded-full shadow-md"
+                v-if="colorList().includes('Sierrablue')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileBlue rounded-full shadow-md"
+                v-if="colorList().includes('Blue')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-mobileGreen rounded-full shadow-md"
+                v-if="colorList().includes('Green')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-Burgundy rounded-full shadow-md"
+                v-if="colorList().includes('Burgundy')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-Beige rounded-full shadow-md"
+                v-if="colorList().includes('Beige')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-brown rounded-full shadow-md"
+                v-if="colorList().includes('Brown')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-lime rounded-full shadow-md"
+                v-if="colorList().includes('Lime')"
+              ></button>
+            </div>
+            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+              <button
+                class="w-[24px] h-[24px] bg-silver rounded-full shadow-md"
+                v-if="colorList().includes('Silver')"
+              ></button>
+            </div>
           </div>
         </div>
 
@@ -181,16 +209,16 @@
           <div class="flex justify-center items-center">
             <button
               @click="counter('+')"
-              class="p-2 border-black border-2 rounded-l-3xl"
+              class="p-2 border-gray border-2 rounded-l-3xl hover:bg-blue hover:border-blue hover:transition-all hover:text-white"
             >
               +
             </button>
-            <p class="py-2 border-y-2 border-black w-8 text-center">
+            <p class="py-2 border-y-2 border-gray w-8 text-center">
               {{ count }}
             </p>
             <button
               @click="counter('-')"
-              class="p-2 border-black border-2 rounded-r-3xl"
+              class="p-2 border-gray border-2 rounded-r-3xl hover:bg-blue hover:border-blue hover:transition-all hover:text-white"
             >
               -
             </button>
@@ -254,6 +282,14 @@
           class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
         >
           <div class="flex flex-row space-x-1 text-blue">
+            <p>{{ product.Slug }}</p>
+          </div>
+          <p>: شناسه محصول</p>
+        </div>
+        <div
+          class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
+        >
+          <div class="flex flex-row space-x-1 text-blue">
             <p>{{ product.Networks }}</p>
           </div>
           <p>: شبکه های ارتباطی</p>
@@ -262,18 +298,18 @@
           class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
         >
           <div class="flex flex-row space-x-1 text-blue">
-            <p>{{ product.Networks }}</p>
+            <p>{{ product.Category }}</p>
           </div>
           <p>: دسته</p>
         </div>
-        <div
+        <!-- <div
           class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
         >
           <div class="flex flex-row space-x-1 text-blue">
             <p>{{ product.Networks }}</p>
           </div>
           <p>: برچسب</p>
-        </div>
+        </div> -->
         <div
           class="flex flex-row space-x-3 justify-center items-center font-bold text-sm"
         >
@@ -709,7 +745,246 @@
           class="w-full h-full"
         />
       </div>
-      
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl text-textlightblue my-3">دوربین سلفی</h3>
+        <productDetail
+          v-if="
+            product.Frontmaincamera !== '0' && product.Frontmaincamera !== ''
+          "
+          title="دوربین سلفی اصلی"
+          :desc="product.Frontmaincamera + 'مگاپیکسل'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Frontdescriptionmaincamera !== '0' &&
+            product.Frontdescriptionmaincamera !== ''
+          "
+          title="مشخصات دوربین سلفی اصلی"
+          :desc="product.Frontdescriptionmaincamera"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Maximumfrontvideores !== '0' &&
+            product.Maximumfrontvideores !== ''
+          "
+          title="حداکثر رزولوشن فیلم‌برداری دوربین‌ سلفی"
+          :desc="product.Maximumfrontvideores"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Resoltionfrontvideo !== '' &&
+            productDetail.Resoltionfrontvideo !== '0'
+          "
+          title="رزولوشن و نرخ فریم ویدئو سلفی"
+          :desc="product.Resoltionfrontvideo"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Descriptionvideofront !== '0' &&
+            productDetail.Descriptionvideofront !== ''
+          "
+          title="توضیحات فیلم‌برداری سلفی	"
+          :desc="product.Descriptionvideofront"
+          class="w-full h-full"
+        />
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl text-textlightblue my-3">باتری و شارژ</h3>
+        <productDetail
+          v-if="
+            product.Batterycapacity !== '0' && product.Batterycapacity !== ''
+          "
+          title="دوربین سلفی اصلی"
+          :desc="product.Batterycapacity + 'میلی‌آمپر ساعت'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Batterycapacityclass !== '0' &&
+            product.Batterycapacityclass !== ''
+          "
+          title="کلاس ظرفیت باتری"
+          :desc="product.Batterycapacityclass"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Batterytype !== '0' && product.Batterytype !== ''"
+          title="نوع باتری"
+          :desc="product.Batterytype"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.ReplaceableBattery !== '' &&
+            productDetail.ReplaceableBattery !== '0'
+          "
+          title="تعویض‌ پذیری باتری"
+          :desc="
+            product.ReplaceableBattery === 0
+              ? 'غیر قابل تعویض توسط کاربر'
+              : 'قابل تعویض توسط کاربر'
+          "
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Maxchargingpower !== '' &&
+            productDetail.Maxchargingpower !== '0'
+          "
+          title="حداکثر توان شارژ پشتیبانی شده	"
+          :desc="product.Maxchargingpower + 'وات'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Fastchargesupport !== '' &&
+            productDetail.Fastchargesupport !== '0'
+          "
+          title="پشتیبانی از شارژ سریع	"
+          :desc="product.Fastchargesupport === 0 ? 'ندارد' : 'دارد'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Wirelesscharge !== '' &&
+            productDetail.Wirelesscharge !== '0'
+          "
+          title="پشتیبانی از شارژ بی‌سیم	"
+          :desc="product.Wirelesscharge === 0 ? 'ندارد' : 'دارد'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Maxwirelesschargingpower !== '' &&
+            productDetail.Maxwirelesschargingpower !== '0'
+          "
+          title="حداکثر توان شارژ بی‌سیم	"
+          :desc="product.Maxwirelesschargingpower + 'وات'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Timeforcharging !== '0' && product.Timeforcharging !== ''
+          "
+          title="زمان موردنیاز برای شارژ"
+          :desc="product.Timeforcharging"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Batteryfeatures !== '0' && product.Batteryfeatures !== ''
+          "
+          title="سایر ویژگی‌های شارژ و باتری"
+          :desc="product.Batteryfeatures"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Connectionport !== '0' && product.Connectionport !== ''"
+          title="درگاه اتصال"
+          :desc="product.Connectionport"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Otgsupport !== '0' && product.Otgsupport !== ''"
+          title="پشتیبانی از OTG"
+          :desc="product.Otgsupport === 0 ? 'ندارد' : 'دارد'"
+          class="w-full h-full"
+        />
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl text-textlightblue my-3">صدا</h3>
+        <productDetail
+          v-if="product.SpeakerType !== '0' && product.SpeakerType !== ''"
+          title="استریو (دوگانه)"
+          :desc="product.SpeakerType"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Jack !== '0' && product.Jack !== ''"
+          title="جک 3.5 میلی‌متری"
+          :desc="product.Jack === 0 ? 'ندارد' : 'دارد'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.AudioFeatures !== '0' && product.AudioFeatures !== ''"
+          title="ویژگی‌‌های صوتی"
+          :desc="product.AudioFeatures"
+          class="w-full h-full"
+        />
+      </div>
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl text-textlightblue my-3">ارتباطات و سنسورها</h3>
+        <productDetail
+          v-if="product.Sensors !== '0' && product.Sensors !== ''"
+          title="حسگرها"
+          :desc="product.Sensors"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Sensorstype !== '0' && product.Sensorstype !== ''"
+          title="نوع حسگر اثر انگشت	"
+          :desc="product.Sensorstype"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.WiFi !== '0' && product.WiFi !== ''"
+          title="Wi-Fi"
+          :desc="product.WiFi"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Desciptionwifi !== '0' && product.Desciptionwifi !== ''"
+          title='توضیحات Wi-Fi	'
+          :desc="product.Desciptionwifi"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Bluetooth !== '0' && product.Bluetooth !== ''"
+          title='بلوتوث'
+          :desc="product.Bluetooth"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Bluetoothdescription !== '0' &&
+            product.Bluetoothdescription !== ''
+          "
+          title='توضیحات بلوتوث	'
+          :desc="product.Bluetoothdescription"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="
+            product.Communicationtechnology !== '0' &&
+            product.Communicationtechnology !== ''
+          "
+          title='فناوری‌ ارتباطی'
+          :desc="product.Communicationtechnology"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Support5g !== '0' && product.Support5g !== ''"
+          title='پشتیبانی از 5G	'
+          :desc="product.Support5g === 0 ? 'ندارد' : 'دارد'"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Simcard !== '0' && product.Simcard !== ''"
+          title='سیم‌کارت	'
+          :desc="product.Simcard"
+          class="w-full h-full"
+        />
+        <productDetail
+          v-if="product.Gps !== '0' && product.Gps !== ''"
+          title='مسیریابی و GPS	'
+          :desc="product.Gps"
+          class="w-full h-full"
+        />
+      </div>
     </div>
     <div
       class="w-[70%] h-full text-right text-lg text-black"
