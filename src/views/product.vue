@@ -202,6 +202,7 @@
         </div>
         <div class="flex flex-row justify-center space-x-5 items-center pt-4">
           <button
+            @click="$store.commit('increaseCartCounter')"
             class="px-6 py-3 bg-lightBlue font-semibold rounded-lg text-white"
           >
             افزودن به سبد خرید
@@ -256,12 +257,14 @@
         </div>
         <div class="flex flex-row-reverse gap-4">
           <div
+            @click="$store.commit('increaseShuffleCounter')"
             class="flex flex-row-reverse text-[15px] items-center gap-1 font-semibold hover:text-gray cursor-pointer"
           >
             <font-awesome-icon icon="fa-solid  fa-shuffle" class="" />
             <p>مقایسه</p>
           </div>
           <div
+            @click="$store.commit('increaseWishListCounter')"
             class="flex flex-row-reverse text-[15px] items-center gap-1 font-semibold hover:text-gray cursor-pointer"
           >
             <font-awesome-icon icon="fa-regular fa-heart" class="" />
