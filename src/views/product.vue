@@ -258,7 +258,7 @@
         <div class="flex flex-row-reverse gap-4">
           <div
             @click="
-              $store.state.isWishListed
+              $store.state.isShuffled
                 ? $store.commit('increaseShuffleCounter')
                 : $store.commit('decreaseShuffleCounter')
             "
