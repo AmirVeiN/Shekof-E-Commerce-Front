@@ -96,88 +96,116 @@
         <div class="flex flex-col space-y-2">
           <p>رنگ ها</p>
           <div class="productColor flex flex-row space-x-2">
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Black')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileBlack rounded-full shadow-md"
-                v-if="colorList().includes('Black')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Olive')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileOlive rounded-full shadow-md"
-                v-if="colorList().includes('Olive')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Purple')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobilePurple rounded-full shadow-md"
-                v-if="colorList().includes('Purple')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('White')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileWhite rounded-full shadow-md"
-                v-if="colorList().includes('White')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Cream')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileCream rounded-full shadow-md"
-                v-if="colorList().includes('Cream')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Gray')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-gray rounded-full shadow-md"
-                v-if="colorList().includes('Gray')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Sierrablue')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-Sierrablue rounded-full shadow-md"
-                v-if="colorList().includes('Sierrablue')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Blue')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileBlue rounded-full shadow-md"
-                v-if="colorList().includes('Blue')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Green')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-mobileGreen rounded-full shadow-md"
-                v-if="colorList().includes('Green')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Burgundy')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-Burgundy rounded-full shadow-md"
-                v-if="colorList().includes('Burgundy')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Beige')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-Beige rounded-full shadow-md"
-                v-if="colorList().includes('Beige')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Brown')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-brown rounded-full shadow-md"
-                v-if="colorList().includes('Brown')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Lime')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-lime rounded-full shadow-md"
-                v-if="colorList().includes('Lime')"
               ></button>
             </div>
-            <div class="hover:border-b-2 hover:border-blue h-[30px]">
+            <div
+              v-if="colorList().includes('Silver')"
+              class="hover:border-b-2 hover:border-blue h-[30px]"
+            >
               <button
                 class="w-[24px] h-[24px] bg-silver rounded-full shadow-md"
-                v-if="colorList().includes('Silver')"
               ></button>
             </div>
           </div>
