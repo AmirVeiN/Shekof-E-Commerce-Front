@@ -257,14 +257,22 @@
         </div>
         <div class="flex flex-row-reverse gap-4">
           <div
-            @click="$store.commit('increaseShuffleCounter')"
+            @click="
+              $store.state.isWishListed
+                ? $store.commit('increaseShuffleCounter')
+                : $store.commit('decreaseShuffleCounter')
+            "
             class="flex flex-row-reverse text-[15px] items-center gap-1 font-semibold hover:text-gray cursor-pointer"
           >
             <font-awesome-icon icon="fa-solid  fa-shuffle" class="" />
             <p>مقایسه</p>
           </div>
           <div
-            @click="$store.commit('increaseWishListCounter')"
+            @click="
+              $store.state.isWishListed
+                ? $store.commit('increaseWishListCounter')
+                : $store.commit('decreaseWishListCounter')
+            "
             class="flex flex-row-reverse text-[15px] items-center gap-1 font-semibold hover:text-gray cursor-pointer"
           >
             <font-awesome-icon icon="fa-regular fa-heart" class="" />
@@ -941,13 +949,13 @@
         />
         <productDetail
           v-if="product.Desciptionwifi !== '0' && product.Desciptionwifi !== ''"
-          title='توضیحات Wi-Fi	'
+          title="توضیحات Wi-Fi	"
           :desc="product.Desciptionwifi"
           class="w-full h-full"
         />
         <productDetail
           v-if="product.Bluetooth !== '0' && product.Bluetooth !== ''"
-          title='بلوتوث'
+          title="بلوتوث"
           :desc="product.Bluetooth"
           class="w-full h-full"
         />
@@ -956,7 +964,7 @@
             product.Bluetoothdescription !== '0' &&
             product.Bluetoothdescription !== ''
           "
-          title='توضیحات بلوتوث	'
+          title="توضیحات بلوتوث	"
           :desc="product.Bluetoothdescription"
           class="w-full h-full"
         />
@@ -965,25 +973,25 @@
             product.Communicationtechnology !== '0' &&
             product.Communicationtechnology !== ''
           "
-          title='فناوری‌ ارتباطی'
+          title="فناوری‌ ارتباطی"
           :desc="product.Communicationtechnology"
           class="w-full h-full"
         />
         <productDetail
           v-if="product.Support5g !== '0' && product.Support5g !== ''"
-          title='پشتیبانی از 5G	'
+          title="پشتیبانی از 5G	"
           :desc="product.Support5g === 0 ? 'ندارد' : 'دارد'"
           class="w-full h-full"
         />
         <productDetail
           v-if="product.Simcard !== '0' && product.Simcard !== ''"
-          title='سیم‌کارت	'
+          title="سیم‌کارت	"
           :desc="product.Simcard"
           class="w-full h-full"
         />
         <productDetail
           v-if="product.Gps !== '0' && product.Gps !== ''"
-          title='مسیریابی و GPS	'
+          title="مسیریابی و GPS	"
           :desc="product.Gps"
           class="w-full h-full"
         />

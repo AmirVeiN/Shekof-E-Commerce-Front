@@ -10,6 +10,8 @@ export default createStore({
     cartCounter: 0,
     wishListCounter: 0,
     shuffleCounter: 0,
+    isWishListed: Boolean,
+    isWishListed: Boolean,
   },
   mutations: {
     initializeStore(state) {
@@ -59,9 +61,19 @@ export default createStore({
     },
     increaseShuffleCounter(state) {
       state.shuffleCounter++;
+      state.isShuffled = false;
+    },
+    decreaseShuffleCounter(state) {
+      state.shuffleCounter--;
+      state.isShuffled = true;
     },
     increaseWishListCounter(state) {
       state.wishListCounter++;
+      state.isWishListed = false;
+    },
+    decreaseWishListCounter(state) {
+      state.wishListCounter--;
+      state.isWishListed = true;
     },
   },
   actions: {},
