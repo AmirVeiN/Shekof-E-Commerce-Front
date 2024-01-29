@@ -399,7 +399,7 @@
             <div
               class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02"
             >
-              0
+              {{ $store.state.shuffleCounter }}
             </div>
             <font-awesome-icon
               icon="fa-solid  fa-shuffle"
@@ -410,7 +410,7 @@
             <div
               class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02"
             >
-              0
+              {{ $store.state.wishListCounter }}
             </div>
             <font-awesome-icon
               icon="fa-regular fa-heart"
@@ -421,7 +421,7 @@
             <div
               class="bg-blue absolute -top-2 -left-2 text-white rounded-full justify-center items-center flex w-4 h-4 text-xs ss02"
             >
-              0
+              {{ $store.state.cartCounter }}
             </div>
             <font-awesome-icon
               icon="fa-solid fa-cart-shopping"

@@ -2,7 +2,7 @@
   <div class="w-full flex justify-center items-center mt-12">
     <div class="flex flex-col space-y-6 w-[68%] min-w-[1000px]">
       <div class="flex flex-row-reverse justify-between items-center">
-        <div class="text-lg font-bold text-blue pr-2 {{ activeCount() }}">
+        <div class="text-xl font-bold text-blue pr-2 {{ activeCount() }}">
           محصولات شکاف
         </div>
         <div class="flex flex-row space-x-6 text-xl font-bold h-8 pl-12">
