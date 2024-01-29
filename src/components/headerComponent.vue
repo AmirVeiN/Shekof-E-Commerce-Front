@@ -379,7 +379,7 @@
           </RouterLink>
           <input
             class="bg-transparent w-full h-full font-semibold flex text-right p-2 pr-3 focus:outline-none"
-            type="text"
+            type="search"
             placeholder="جستجوی محصولات"
             id="search"
             value="search"
@@ -429,34 +429,21 @@
             />
           </button>
         </div>
-        <button
-          class="flex w-40 flex-row items-center justify-center space-x-1 border-gray/70 hover:border-black border-2 rounded-2xl h-full py-2"
+        <div v-if="isAuthenticated">
+          <p class="text-gray hover:text-black"></p>
+        </div>
+        <RouterLink
+          to="/Login/"
+          class="flex w-40 flex-row items-center justify-center space-x-1 border-gray/70 border-2 rounded-2xl h-full py-2"
         >
-          <div>
-            <RouterLink to="/Login/">
-              <p class="text-gray hover:text-black">ورود / ثبت نام</p>
-            </RouterLink>
+          <div class="flex space-x-1 items-center">
+            <p class="text-gray">ورود / ثبت نام</p>
+            <font-awesome-icon
+              class="text-xl text-gray"
+              icon="fa-regular fa-user"
+            />
           </div>
-          <div v-if="isAuthenticated">
-            <p class="text-gray hover:text-black"></p>
-          </div>
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              width="18"
-              viewBox="0 0 448 512"
-            >
-              !Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
-              License - https://fontawesome.com/license/free Copyright 2023
-              Fonticons, Inc.
-              <path
-                fill="#505050"
-                d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"
-              />
-            </svg>
-          </div>
-        </button>
+        </RouterLink>
       </div>
     </div>
   </div>
@@ -477,14 +464,13 @@ export default {
   components: {
     RouterLink,
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {},
   computed: {
     isAuthenticated() {
       return this.$store.state.isAuthenticated;
     },
-    userName(){ }
+    userName() {},
   },
 };
 </script>

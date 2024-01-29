@@ -18,7 +18,8 @@ import {
   faSquareCheck,
   faInfo,
 } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart,faUser } from "@fortawesome/free-regular-svg-icons";
+
 import {
   faYoutube,
   faTwitter,
@@ -57,7 +58,8 @@ library.add(
   faSquareCheck,
   faLinkedinIn,
   faFacebookF,
-  faInfo
+  faInfo,
+  faUser
 );
 
 const app = createApp(App);
