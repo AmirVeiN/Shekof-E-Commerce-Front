@@ -109,6 +109,9 @@ export default {
   setup() {
     return {};
   },
+  mounted() {
+    document.title = 'شکاف | درباره ما'
+  },
 };
 </script>
 <script setup>

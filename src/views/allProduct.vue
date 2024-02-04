@@ -297,6 +297,7 @@ export default {
     components: {
     },
     mounted() {
+        document.title = 'شکاف | فروشگاه'
         this.getItem()
         this.ChangeActive()
         this.activeCount()

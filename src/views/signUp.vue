@@ -85,6 +85,9 @@ export default {
       errors: []
     }
   },
+  mounted() {
+    document.title = 'شکاف | ثبت نام'
+  },
   methods: {
     submitForm() {
       this.errors = []

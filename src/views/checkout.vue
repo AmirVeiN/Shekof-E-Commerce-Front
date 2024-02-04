@@ -417,6 +417,9 @@ export default {
       payment: "",
     };
   },
+  mounted() {
+    document.title = 'شکاف | پرداخت'
+  },
   methods: {
     methodclick() {
       this.paymentotc ? (this.paymentotc = false) : (this.paymentotc = true);

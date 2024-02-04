@@ -260,6 +260,9 @@ export default {
   setup() {
     return {};
   },
+  mounted() {
+    document.title = 'شکاف | قوانین'
+  },
 };
 </script>
 <script setup>

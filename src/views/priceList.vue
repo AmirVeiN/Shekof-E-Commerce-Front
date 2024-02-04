@@ -41,6 +41,7 @@ export default {
     },
     mounted() {
         this.getItem()
+        document.title = 'شکاف | لیست فیمت'
 
     },
     methods: {
